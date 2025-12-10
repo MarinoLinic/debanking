@@ -77,17 +77,6 @@
 		"url": "https://www.volksbank.at"
 	},
 	{
-		"name": "Hypo Vorarlberg",
-		"type": "Traditional Bank",
-		"subtype": "Mortgage Bank",
-		"country": "Austria",
-		"region": "Central Europe",
-		"people": ["Martin Sellner"],
-		"description": "A regional bank majority-owned by the State of Vorarlberg.",
-		"year_last": null,
-		"url": "https://www.hypovlbg.at"
-	},
-	{
 		"name": "Austrian Anadi Bank",
 		"type": "Traditional Bank",
 		"subtype": "Regional Bank",
@@ -660,6 +649,39 @@
 		"url": "https://www.xapo.com"
 	},
 	{
+		"name": "Genome",
+		"type": "Neobank",
+		"subtype": "Business/Consumer",
+		"country": "Lithuania",
+		"region": "Northern Europe",
+		"people": ["Martin Sellner"],
+		"description": "A financial platform offering IBANs and payment solutions, operated by UAB Maneuver.",
+		"year_last": null,
+		"url": "https://genome.eu"
+	},
+	{
+		"name": "OlkyPay",
+		"type": "Neobank",
+		"subtype": "Professional Banking",
+		"country": "Luxembourg/France",
+		"region": "Western Europe",
+		"people": ["Martin Sellner"],
+		"description": "A neobank focusing on payment services for professionals and companies.",
+		"year_last": null,
+		"url": "https://www.olkypay.com"
+	},
+	{
+		"name": "ZEN.com",
+		"type": "Neobank",
+		"subtype": "Consumer/Business",
+		"country": "Poland",
+		"region": "Central Europe",
+		"people": ["Martin Sellner"],
+		"description": "A digital payment platform and neobank offering multi-currency accounts.",
+		"year_last": null,
+		"url": "https://www.zen.com"
+	},
+	{
 		"name": "Guru Pay",
 		"type": "Fintech",
 		"subtype": "Payment Service",
@@ -704,15 +726,92 @@
 		"url": "https://everestcard.com"
 	},
 	{
-		"name": "Global",
+		"name": "Guavapay",
 		"type": "Fintech",
-		"subtype": "Payment/Trading",
-		"country": "Unknown",
+		"subtype": "Payment Processor",
+		"country": "UK/Canada",
+		"region": "Western Europe",
+		"people": ["Martin Sellner"],
+		"description": "A global fintech company offering cross-border payments and card processing.",
+		"year_last": null,
+		"url": "https://guavapay.com"
+	},
+	{
+		"name": "Trustyfy",
+		"type": "Fintech",
+		"subtype": "Payment Platform",
+		"country": "Austria",
+		"region": "Central Europe",
+		"people": ["Martin Sellner"],
+		"description": "A donation and payment platform.",
+		"year_last": null,
+		"url": "https://www.trustyfy.com"
+	},
+	{
+		"name": "Monvenience",
+		"type": "Fintech",
+		"subtype": "E-Wallet",
+		"country": "Estonia",
+		"region": "Northern Europe",
+		"people": ["Martin Sellner"],
+		"description": "A provider of IBAN accounts and prepaid card solutions.",
+		"year_last": null,
+		"url": "https://www.monvenience.com"
+	},
+	{
+		"name": "eMoney Advisor",
+		"type": "Fintech",
+		"subtype": "Wealth Tech",
+		"country": "USA",
+		"region": "North America",
+		"people": ["Martin Sellner"],
+		"description": "A wealth planning and management platform used by financial advisors.",
+		"year_last": null,
+		"url": "https://emoneyadvisor.com"
+	},
+	{
+		"name": "Paragon (Maxi Digital)",
+		"type": "Fintech",
+		"subtype": "Payment App",
+		"country": "Global",
 		"region": "Global",
 		"people": ["Martin Sellner"],
-		"description": "Fintech entity represented by the orange 'GLOBAL' logo.",
+		"description": "A mobile payment and digital wallet application.",
 		"year_last": null,
-		"url": null
+		"url": "https://play.google.com/store/apps/details?id=com.maxidigital.paragonder"
+	},
+	{
+		"name": "Wallester",
+		"type": "Fintech",
+		"subtype": "Card Issuing",
+		"country": "Estonia",
+		"region": "Northern Europe",
+		"people": ["Martin Sellner"],
+		"description": "A licensed payment institution specializing in white-label Visa card issuing.",
+		"year_last": null,
+		"url": "https://wallester.com"
+	},
+	{
+		"name": "3S Money",
+		"type": "Fintech",
+		"subtype": "Business Payments",
+		"country": "UK",
+		"region": "Western Europe",
+		"people": ["Martin Sellner"],
+		"description": "A cross-border payments platform for international business.",
+		"year_last": null,
+		"url": "https://3s.money"
+	},
+	{
+		"name": "Airwallex",
+		"type": "Fintech",
+		"subtype": "Business Payments",
+		"country": "Australia/Global",
+		"region": "Global",
+		"people": ["Martin Sellner"],
+		"description": "A global payments and financial platform for businesses.",
+		"year_last": null,
+		"url": "https://www.airwallex.com"
 	},
 	{
 		"name": "Stripe",
@@ -823,6 +922,39 @@
 		"description": "Service allowing merchants to accept cryptocurrency payments.",
 		"year_last": 2019,
 		"url": "https://commerce.coinbase.com"
+	},
+	{
+		"name": "Novalnet",
+		"type": "Payment Processor",
+		"subtype": "Full Service",
+		"country": "Germany",
+		"region": "Central Europe",
+		"people": ["Martin Sellner"],
+		"description": "A full-service payment provider offering gateways and risk management.",
+		"year_last": null,
+		"url": "https://www.novalnet.com"
+	},
+	{
+		"name": "Adyen",
+		"type": "Payment Processor",
+		"subtype": "Gateway",
+		"country": "Netherlands",
+		"region": "Western Europe",
+		"people": ["Martin Sellner"],
+		"description": "A global payment company used by many large tech companies and merchants.",
+		"year_last": null,
+		"url": "https://www.adyen.com"
+	},
+	{
+		"name": "SumUp",
+		"type": "Payment Processor",
+		"subtype": "POS/Merchant",
+		"country": "UK/Germany",
+		"region": "Western Europe",
+		"people": ["Martin Sellner"],
+		"description": "A global financial technology company known for its card readers.",
+		"year_last": null,
+		"url": "https://www.sumup.com"
 	},
 	{
 		"name": "Wise",
@@ -1001,6 +1133,50 @@
 		"url": "https://uphold.com"
 	},
 	{
+		"name": "Kriptomat",
+		"type": "Cryptocurrency",
+		"subtype": "Exchange",
+		"country": "Estonia",
+		"region": "Northern Europe",
+		"people": ["Martin Sellner"],
+		"description": "A European cryptocurrency exchange and wallet provider.",
+		"year_last": null,
+		"url": "https://kriptomat.io"
+	},
+	{
+		"name": "Trastra",
+		"type": "Cryptocurrency",
+		"subtype": "Crypto Card",
+		"country": "Czech Republic/UK",
+		"region": "Central Europe",
+		"people": ["Martin Sellner"],
+		"description": "A crypto debit card and wallet provider.",
+		"year_last": null,
+		"url": "https://trastra.com"
+	},
+	{
+		"name": "Strike",
+		"type": "Cryptocurrency",
+		"subtype": "Payment App",
+		"country": "USA",
+		"region": "Global",
+		"people": ["Martin Sellner"],
+		"description": "A mobile payments app built on the Bitcoin Lightning Network.",
+		"year_last": null,
+		"url": "https://strike.me"
+	},
+	{
+		"name": "Gemini",
+		"type": "Cryptocurrency",
+		"subtype": "Exchange",
+		"country": "USA",
+		"region": "Global",
+		"people": ["Martin Sellner"],
+		"description": "A cryptocurrency exchange and custodian founded by the Winklevoss twins.",
+		"year_last": null,
+		"url": "https://www.gemini.com"
+	},
+	{
 		"name": "Skrill",
 		"type": "E-Wallet",
 		"subtype": "Digital Wallet",
@@ -1098,6 +1274,28 @@
 		"description": "Digital wealth management platform.",
 		"year_last": null,
 		"url": "https://www.froots.io"
+	},
+	{
+		"name": "XTB",
+		"type": "Investing",
+		"subtype": "Broker",
+		"country": "Poland",
+		"region": "Central Europe",
+		"people": ["Martin Sellner"],
+		"description": "A global forex and CFD broker.",
+		"year_last": null,
+		"url": "https://www.xtb.com"
+	},
+	{
+		"name": "Trade Republic",
+		"type": "Investing",
+		"subtype": "Broker",
+		"country": "Germany",
+		"region": "Central Europe",
+		"people": ["Martin Sellner"],
+		"description": "A German mobile-first neobroker.",
+		"year_last": null,
+		"url": "https://traderepublic.com"
 	},
 	{
 		"name": "Kickstarter",
