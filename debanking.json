@@ -315,7 +315,7 @@
 		"region": "North America",
 		"people": ["Nick Fuentes"],
 		"description": "One of the largest banks in the United States.",
-		"year_last": 2022,
+		"year_last": null,
 		"url": "https://www.usbank.com"
 	},
 	{
@@ -326,7 +326,7 @@
 		"region": "North America",
 		"people": ["Nick Fuentes"],
 		"description": "A US-based bank headquartered in Illinois.",
-		"year_last": 2022,
+		"year_last": null,
 		"url": "https://www.bylinebank.com/"
 	},
 	{
@@ -337,7 +337,7 @@
 		"region": "North America",
 		"people": ["Nick Fuentes"],
 		"description": "One of the largest banks in the United States, headquartered in Cincinnati, Ohio.",
-		"year_last": 2022,
+		"year_last": null,
 		"url": "https://www.53.com"
 	},
 	{
@@ -350,17 +350,6 @@
 		"description": "A financial services company serving U.S. military members, veterans, and their families.",
 		"year_last": 2023,
 		"url": "https://www.usaa.com/"
-	},
-	{
-		"name": "M&T Bank",
-		"type": "Traditional Bank",
-		"subtype": "Commercial Bank",
-		"country": "USA",
-		"region": "North America",
-		"people": ["James O’Keefe"],
-		"description": "US bank that froze the funds of Project Veritas.",
-		"year_last": null,
-		"url": "https://www.mtb.com"
 	},
 	{
 		"name": "BankUnited",
@@ -797,7 +786,7 @@
 		"subtype": "Gateway",
 		"country": "USA",
 		"region": "Global",
-		"people": ["Martin Sellner", "Nick Fuentes", "Laura Loomer"],
+		"people": ["Martin Sellner", "Nick Fuentes", "Laura Loomer", "Enrique Tarrio"],
 		"description": "Financial infrastructure platform for the internet. Banned Fuentes and Loomer from processing payments.",
 		"year_last": null,
 		"url": "https://stripe.com"
@@ -808,7 +797,15 @@
 		"subtype": "Wallet",
 		"country": "USA",
 		"region": "Global",
-		"people": ["Martin Sellner", "Tommy Robinson", "Nick Fuentes", "Laura Loomer", "Free Speech Union", "Visegrád 24"],
+		"people": [
+			"Martin Sellner",
+			"Tommy Robinson",
+			"Nick Fuentes",
+			"Laura Loomer",
+			"Free Speech Union",
+			"Visegrád 24",
+			"Enrique Tarrio"
+		],
 		"description": "A multinational financial technology company operating an online payments system. Known for widespread bans.",
 		"year_last": null,
 		"url": "https://www.paypal.com"

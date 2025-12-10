@@ -228,5 +228,20 @@
 		"entity": "Axos Bank",
 		"person": "Alex Jones",
 		"url": "https://apnews.com/article/alex-jones-sandy-hook-shooting-bankruptcy-dde6b592159f3a7e77b7c6497d1ce1ae"
+	},
+	{
+		"entity": "JPMorgan Chase",
+		"person": "Enrique Tarrio",
+		"url": "https://www.gisreportsonline.com/r/financial-deplatforming/"
+	},
+	{
+		"entity": "PayPal",
+		"person": "Enrique Tarrio",
+		"url": "https://en.wikipedia.org/wiki/Enrique_Tarrio#Split_within_Proud_Boys_after_January_6"
+	},
+	{
+		"entity": "Stripe",
+		"person": "Enrique Tarrio",
+		"url": "https://en.wikipedia.org/wiki/Enrique_Tarrio#Split_within_Proud_Boys_after_January_6"
 	}
 ]
