@@ -1367,7 +1367,7 @@
 		"name": "DonationAlerts",
 		"type": "Crowdfunding",
 		"subtype": "Streamer Donations",
-		"country": "Netherlands/Russia",
+		"country": "Hong Kong",
 		"region": "Global",
 		"people": ["Martin Sellner"],
 		"description": "A service for streamers to receive donations and alerts, owned by My.com B.V.",
