@@ -39,7 +39,7 @@
 		"country": "Austria",
 		"region": "Central Europe",
 		"people": ["Martin Sellner", "Jürgen Elsässer"],
-		"description": "The generic brand for public savings banks in German-speaking countries.",
+		"description": "The generic brand for public savings banks in German-speaking countries. Usually Erste. Elsässer was rejected from opening an account, but later won the court case.",
 		"year_last": null,
 		"url": "https://www.sparkasse.at"
 	},
@@ -401,7 +401,7 @@
 		"subtype": "Retail Bank",
 		"country": "Germany",
 		"region": "Central Europe",
-		"people": ["Martin Sellner", "AfD", "Jürgen Elsässer"],
+		"people": ["Martin Sellner", "AfD"],
 		"description": "A branch of Deutsche Bank focusing on retail customers. Frequently cited in political account closures.",
 		"year_last": null,
 		"url": "https://www.postbank.de"
@@ -644,7 +644,7 @@
 		"country": "Lithuania",
 		"region": "Northern Europe",
 		"people": ["Martin Sellner"],
-		"description": "UAB Guru Pay is a fintech providing payment solutions (Logo labeled 'GPAY' in image).",
+		"description": "UAB Guru Pay is a fintech providing payment solutions.",
 		"year_last": null,
 		"url": "https://gurupay.eu"
 	},
