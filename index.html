@@ -93,7 +93,6 @@
 			.quote-container {
 				background: linear-gradient(180deg, rgba(220, 38, 38, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
 				border-left: 4px solid var(--accent-red);
-				/* Increased padding-left/right to 80px to stop text overlapping arrows */
 				padding: 30px 80px;
 				margin-bottom: 40px;
 				border-radius: 0 8px 8px 0;
@@ -102,7 +101,7 @@
 				background-color: white;
 				box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 				transition: all 0.3s ease-in-out;
-				min-height: 140px; /* Prevent jumpiness */
+				min-height: 140px;
 				opacity: 1;
 				overflow: hidden;
 			}
@@ -164,15 +163,14 @@
 				color: var(--accent-red);
 			}
 
-			/* Carousel Nav Buttons */
 			.carousel-btn {
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
 				background: none;
 				border: none;
-				color: #9ca3af; /* Lighter gray by default */
-				font-size: 1.8rem; /* Slightly larger */
+				color: #9ca3af;
+				font-size: 1.8rem;
 				cursor: pointer;
 				padding: 10px;
 				transition: all 0.2s;
@@ -186,7 +184,6 @@
 				color: var(--accent-red);
 				background-color: rgba(0, 0, 0, 0.03);
 			}
-			/* Moved slightly closer to edge (0px) since padding is large enough now */
 			.carousel-btn.prev {
 				left: -70px;
 			}
@@ -279,6 +276,38 @@
 				gap: 10px;
 				margin-left: auto;
 				flex-wrap: wrap;
+				align-items: center;
+			}
+
+			/* Layout Switcher */
+			.layout-controls {
+				display: flex;
+				background: white;
+				border: 1px solid var(--border);
+				border-radius: 8px;
+				overflow: hidden;
+				margin-right: 10px;
+			}
+			.layout-btn {
+				background: white;
+				border: none;
+				padding: 8px 12px;
+				cursor: pointer;
+				color: var(--text-muted);
+				font-size: 0.9rem;
+				font-weight: 500;
+				border-right: 1px solid var(--border);
+			}
+			.layout-btn:last-child {
+				border-right: none;
+			}
+			.layout-btn:hover {
+				background: #f9fafb;
+				color: var(--text-main);
+			}
+			.layout-btn.active {
+				background: var(--text-main);
+				color: white;
 			}
 
 			.filter-badge {
@@ -317,7 +346,6 @@
 				font-weight: 500;
 			}
 
-			/* Generic Dropdown Style */
 			select.custom-select {
 				background: white;
 				color: var(--text-main);
@@ -334,7 +362,6 @@
 				border-color: #9ca3af;
 			}
 
-			/* Search Input */
 			.search-input {
 				background: white;
 				color: var(--text-main);
@@ -351,17 +378,21 @@
 				border-color: transparent;
 			}
 
-			/* --- Grid Layout --- */
-			.grid-container {
-				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-				gap: 24px;
+			/* --- Main Content Area (Layouts) --- */
+			#contentArea {
 				max-width: 1200px;
 				margin: 0 auto;
 				padding: 0 20px;
 			}
 
-			/* --- Cards --- */
+			/* Grid Layout (Default) */
+			#contentArea.grid-view {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+				gap: 24px;
+			}
+
+			/* Card Styles (Grid) */
 			.card {
 				background-color: var(--card-bg);
 				border: 1px solid var(--border);
@@ -374,14 +405,12 @@
 				overflow: hidden;
 				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 			}
-
 			.card:hover {
 				transform: translateY(-2px);
 				box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 				border-color: #d1d5db;
 			}
 
-			/* Top Right Ribbon Badge */
 			.status-badge {
 				position: absolute;
 				top: 18px;
@@ -398,8 +427,8 @@
 				z-index: 2;
 			}
 			.status-badge.red {
-				background-color: #fee2e2; /* Very light red */
-				color: #991b1b; /* Dark red */
+				background-color: #fee2e2;
+				color: #991b1b;
 				border-bottom: 1px solid rgba(220, 38, 38, 0.1);
 			}
 
@@ -408,10 +437,9 @@
 				gap: 15px;
 				margin-bottom: 15px;
 				align-items: flex-start;
-				padding-right: 40px; /* Space for the top-right badge */
+				padding-right: 40px;
 			}
 
-			/* Icons & Logos */
 			.icon-wrapper {
 				width: 48px;
 				height: 48px;
@@ -457,7 +485,6 @@
 				line-height: 1.2;
 				margin-bottom: 4px;
 			}
-
 			.entity-name a {
 				color: inherit;
 				text-decoration: none;
@@ -482,7 +509,6 @@
 				font-weight: 600;
 			}
 
-			/* Meta Tags (Type vs Country) */
 			.meta-tags {
 				display: flex;
 				gap: 8px;
@@ -504,13 +530,11 @@
 			.tag:hover {
 				opacity: 0.8;
 			}
-
 			.tag-type {
 				background-color: var(--accent-blue-bg);
 				color: var(--accent-blue);
 				border: 1px solid rgba(37, 99, 235, 0.1);
 			}
-
 			.tag-country {
 				background-color: white;
 				color: var(--text-main);
@@ -536,7 +560,6 @@
 				padding-top: 15px;
 				margin-top: auto;
 			}
-
 			.people-label {
 				font-size: 0.7rem;
 				color: var(--text-muted);
@@ -545,19 +568,17 @@
 				letter-spacing: 0.5px;
 				font-weight: 700;
 			}
-
 			.people-tags {
 				display: flex;
 				flex-wrap: wrap;
 				gap: 6px;
 			}
 
-			/* Person Tag with Action Button Support */
 			.person-tag {
 				font-size: 0.8rem;
 				background: #f3f4f6;
 				color: var(--text-main);
-				padding: 4px 6px 4px 12px; /* Left padding for text, right for button */
+				padding: 4px 6px 4px 12px;
 				border-radius: 20px;
 				cursor: pointer;
 				transition: all 0.2s;
@@ -566,16 +587,14 @@
 				display: inline-flex;
 				align-items: center;
 				gap: 6px;
-				height: 30px; /* Fixed height for consistency */
+				height: 30px;
 			}
-
 			.person-tag:hover {
 				background: white;
 				border-color: var(--accent-red);
 				color: var(--accent-red);
 			}
 
-			/* New Minimalist Source Button */
 			.source-link {
 				display: inline-flex;
 				align-items: center;
@@ -589,21 +608,18 @@
 				flex-shrink: 0;
 				transition: all 0.2s ease;
 			}
-
 			.source-link:hover {
 				background-color: var(--accent-blue);
 				color: white;
 				border-color: var(--accent-blue);
 				transform: scale(1.1);
 			}
-
 			.source-link svg {
 				width: 11px;
 				height: 11px;
 				stroke-width: 2.5;
 			}
 
-			/* Alternatives Specifics */
 			.verification-badge {
 				display: inline-block;
 				font-size: 0.75rem;
@@ -612,7 +628,6 @@
 				margin-top: 10px;
 				font-weight: 600;
 			}
-
 			.status-verified {
 				background: var(--accent-green-bg);
 				color: var(--accent-green);
@@ -628,7 +643,6 @@
 				color: var(--text-muted);
 				border: 1px solid var(--border);
 			}
-
 			.alt-link {
 				display: block;
 				margin-top: 15px;
@@ -638,6 +652,102 @@
 				font-size: 0.9rem;
 			}
 			.alt-link:hover {
+				text-decoration: underline;
+			}
+
+			/* --- List View Styles --- */
+			.list-view-container {
+				background: white;
+				padding: 40px;
+				border-radius: 12px;
+				border: 1px solid var(--border);
+			}
+			.list-group {
+				margin-bottom: 30px;
+			}
+			.list-group h3 {
+				font-size: 1.2rem;
+				color: var(--text-main);
+				border-bottom: 2px solid var(--bg-color);
+				padding-bottom: 10px;
+				margin-bottom: 15px;
+			}
+			.list-item {
+				padding: 10px 0;
+				border-bottom: 1px solid var(--bg-color);
+			}
+			.list-item:last-child {
+				border-bottom: none;
+			}
+			.list-item-header {
+				font-weight: 700;
+				font-size: 1rem;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+			.list-item-meta {
+				font-size: 0.85rem;
+				color: var(--text-muted);
+				margin-top: 4px;
+			}
+
+			/* --- Table View Styles --- */
+			.table-responsive {
+				overflow-x: auto;
+				background: white;
+				border-radius: 12px;
+				border: 1px solid var(--border);
+			}
+			.data-table {
+				width: 100%;
+				border-collapse: collapse;
+				min-width: 800px; /* Force horizontal scroll on mobile */
+			}
+			.data-table th,
+			.data-table td {
+				padding: 14px 20px;
+				border-bottom: 1px solid var(--border);
+				text-align: left;
+				vertical-align: top;
+			}
+			.data-table th {
+				background: #f9fafb;
+				font-weight: 600;
+				color: var(--text-muted);
+				font-size: 0.85rem;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+			.data-table tr:last-child td {
+				border-bottom: none;
+			}
+			.data-table tr:hover td {
+				background: #fdfdfd;
+			}
+
+			/* Mini icons for table */
+			.data-table .icon-wrapper {
+				width: 32px;
+				height: 32px;
+				border-radius: 6px;
+			}
+			.data-table .entity-icon {
+				font-size: 0.8rem;
+			}
+			.table-entity-cell {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				font-weight: 700;
+				color: var(--text-main);
+			}
+			.table-entity-cell a {
+				color: inherit;
+				text-decoration: none;
+			}
+			.table-entity-cell a:hover {
+				color: var(--accent-blue);
 				text-decoration: underline;
 			}
 
@@ -672,7 +782,6 @@
 				gap: 10px;
 				z-index: 100;
 			}
-
 			.scroll-btn {
 				width: 45px;
 				height: 45px;
@@ -689,7 +798,6 @@
 				transition: all 0.2s;
 				opacity: 0.7;
 			}
-
 			.scroll-btn:hover {
 				opacity: 1;
 				transform: translateY(-2px);
@@ -709,42 +817,29 @@
 
 			/* Mobile Optimizations */
 			@media (max-width: 768px) {
-				.grid-container {
+				#contentArea.grid-view {
 					grid-template-columns: 1fr;
 				}
 				h1 {
 					font-size: 1.8rem;
 				}
-
 				.quote-container {
-					/* Increased mobile padding as well to safely clear arrows */
 					padding: 20px 40px;
 					border-left-width: 3px;
 				}
 				.quote-text {
 					font-size: 0.9rem;
-					line-height: 1.4;
-					margin-bottom: 10px;
 				}
-				.quote-source {
-					font-size: 0.8rem;
-				}
-				.quote-toggle-wrapper {
-					margin-bottom: 5px;
-				}
-
 				.carousel-btn {
 					padding: 5px;
 					font-size: 1.2rem;
 				}
-				/* Ensure arrows stick to very edge on mobile to maximize text space */
 				.carousel-btn.prev {
 					left: -35px;
 				}
 				.carousel-btn.next {
 					right: -35px;
 				}
-
 				.controls-area {
 					flex-direction: column;
 					align-items: stretch;
@@ -758,6 +853,12 @@
 					width: 100%;
 					margin-left: 0;
 					gap: 10px;
+					align-items: stretch;
+				}
+				.layout-controls {
+					margin-right: 0;
+					justify-content: center;
+					margin-bottom: 5px;
 				}
 				select.custom-select,
 				.search-input {
@@ -816,6 +917,12 @@
 			</div>
 
 			<div class="filter-group">
+				<div class="layout-controls">
+					<button class="layout-btn active" id="btn-grid" onclick="switchLayout('grid')" title="Grid View">Grid</button>
+					<button class="layout-btn" id="btn-list" onclick="switchLayout('list')" title="List View">List</button>
+					<button class="layout-btn" id="btn-table" onclick="switchLayout('table')" title="Table View">Table</button>
+				</div>
+
 				<input
 					type="text"
 					id="searchInput"
@@ -836,8 +943,8 @@
 			</div>
 		</div>
 
-		<!-- Main Content Grid -->
-		<div id="grid" class="grid-container">
+		<!-- Main Content Area -->
+		<div id="contentArea" class="grid-view">
 			<div style="color: var(--text-muted); text-align: center; grid-column: 1/-1; padding: 50px">
 				Loading data...<br />
 				<small>Note: If viewing locally, ensure you are running a local server (CORS).</small>
@@ -922,15 +1029,10 @@
 				startCarousel()
 			}
 
-			// Toggle Quote Visibility
 			function toggleQuote() {
 				const container = document.getElementById('quoteContainer')
 				const btn = document.getElementById('quoteToggleBtn')
-
-				// Toggle the class
 				container.classList.toggle('hidden')
-
-				// Update button text
 				if (container.classList.contains('hidden')) {
 					btn.innerText = 'Show Quote Context'
 				} else {
@@ -940,12 +1042,12 @@
 
 			// --- Main Data Logic ---
 
-			// State
 			let debankingData = []
 			let alternativesData = []
-			let sourcesMap = {} // Maps "Entity|Person" -> URL
-			let globalSources = {} // Maps "Person" -> URL (for wildcards)
-			let currentTab = 'debanking' // 'debanking' or 'alternatives'
+			let sourcesMap = {}
+			let globalSources = {}
+			let currentTab = 'debanking'
+			let currentLayout = 'grid' // 'grid', 'list', 'table'
 
 			let filters = {
 				person: null,
@@ -954,9 +1056,8 @@
 				search: null,
 			}
 
-			// Initialize
 			document.addEventListener('DOMContentLoaded', () => {
-				initCarousel() // Start the quote carousel
+				initCarousel()
 
 				Promise.all([
 					fetch('debanking.json').then((res) => res.json()),
@@ -964,17 +1065,14 @@
 					fetch('sources.json').then((res) => res.json()),
 				])
 					.then(([debanking, alternatives, sources]) => {
-						// Process Sources
 						sources.forEach((src) => {
 							if (src.entity === '*') {
 								globalSources[src.person] = src.url
 							} else {
-								// Create composite key
 								sourcesMap[`${src.entity}|${src.person}`] = src.url
 							}
 						})
 
-						// Order debanking by number of people affected (Descending)
 						debankingData = debanking.sort((a, b) => {
 							const countA = a.people ? a.people.length : 0
 							const countB = b.people ? b.people.length : 0
@@ -988,14 +1086,13 @@
 					.catch((err) => {
 						console.error(err)
 						document.getElementById(
-							'grid'
+							'contentArea'
 						).innerHTML = `<div style="text-align:center; color: var(--accent-red); grid-column: 1/-1;">
                         Error loading data. Please ensure JSON files are present and you are using a local server (CORS).
                     </div>`
 					})
 			})
 
-			// Helper: Generate Monogram from Name
 			function getMonogram(name) {
 				if (!name) return '?'
 				const parts = name.split(' ')
@@ -1005,10 +1102,8 @@
 				return name.substring(0, 2).toUpperCase()
 			}
 
-			// Helper: Get Flag IMG from FlagCDN
 			function getFlagHtml(country) {
 				if (!country) return `<img src="https://flagcdn.com/w40/un.png" class="flag-img" alt="Global">`
-
 				const cleanName = country.split('/')[0].trim().toLowerCase()
 				const isoMap = {
 					austria: 'at',
@@ -1056,7 +1151,6 @@
 					: `<img src="https://flagcdn.com/w40/un.png" class="flag-img" alt="Global">`
 			}
 
-			// Helper: Unified Icon Renderer
 			function renderIconHtml(item) {
 				const monogram = getMonogram(item.name)
 				let content
@@ -1079,7 +1173,26 @@
 				}
 			}
 
-			// Helper: Populate Dropdowns
+			function renderPeopleHtml(item) {
+				if (!item.people || item.people.length === 0) return ''
+
+				return item.people
+					.map((p) => {
+						const sourceUrl = sourcesMap[`${item.name}|${p}`] || globalSources[p]
+						const linkHtml = sourceUrl
+							? `<a href="${sourceUrl}" target="_blank" class="source-link" title="View Source for ${p}" onclick="event.stopPropagation();">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+								<polyline points="15 3 21 3 21 9"></polyline>
+								<line x1="10" y1="14" x2="21" y2="3"></line>
+							</svg>
+						   </a>`
+							: ''
+						return `<span class="person-tag" onclick="addFilter('person', '${p}')">${p}${linkHtml}</span>`
+					})
+					.join('')
+			}
+
 			function populateDropdowns() {
 				const countrySet = new Set()
 				const typeSet = new Set()
@@ -1087,7 +1200,6 @@
 
 				;[...debankingData, ...alternativesData].forEach((item) => {
 					if (item.name && item.name.startsWith('None identified')) return
-
 					if (item.type) typeSet.add(item.type)
 					if (item.country) {
 						const parts = item.country.split('/')
@@ -1123,7 +1235,8 @@
 				return opt
 			}
 
-			// Navigation & Filtering
+			// --- Logic Switchers ---
+
 			function switchTab(tab) {
 				currentTab = tab
 				document.querySelectorAll('.tab-btn').forEach((btn) => {
@@ -1132,15 +1245,25 @@
 						btn.innerText.toLowerCase().includes(tab === 'debanking' ? 'debanking' : 'alternatives')
 					)
 				})
-				// Keep filters/search active when switching? Usually better to clear or keep.
-				// For now we clear to avoid confusion.
 				clearAllFilters()
+			}
+
+			function switchLayout(layout) {
+				currentLayout = layout
+				document.querySelectorAll('.layout-btn').forEach((btn) => {
+					btn.classList.toggle('active', btn.id === `btn-${layout}`)
+				})
+
+				const contentArea = document.getElementById('contentArea')
+				contentArea.className = '' // Reset class
+				if (layout === 'grid') contentArea.classList.add('grid-view')
+
+				render()
 			}
 
 			function addFilter(key, value) {
 				if (!value) return
 				filters[key] = value
-				// Sync UI
 				if (key === 'country') document.getElementById('countrySelect').value = value
 				if (key === 'type') document.getElementById('typeSelect').value = value
 				if (key === 'person') document.getElementById('personSelect').value = value
@@ -1169,19 +1292,18 @@
 				render()
 			}
 
-			// Rendering
+			// --- Render Logic ---
+
 			function render() {
-				const grid = document.getElementById('grid')
+				const contentArea = document.getElementById('contentArea')
 				const filterContainer = document.getElementById('activeFilters')
 				const clearBtn = document.getElementById('clearBtn')
 				const resultsCount = document.getElementById('resultsCount')
 
-				grid.innerHTML = ''
 				filterContainer.innerHTML = ''
+				contentArea.innerHTML = ''
 
 				let hasFilters = false
-
-				// Render badges for dropdown filters
 				const dropdownKeys = ['person', 'type', 'country']
 				dropdownKeys.forEach((key) => {
 					if (filters[key]) {
@@ -1193,44 +1315,47 @@
 						filterContainer.appendChild(badge)
 					}
 				})
-
 				if (filters.search) hasFilters = true
-
 				clearBtn.style.display = hasFilters ? 'block' : 'none'
 
 				const sourceData = currentTab === 'debanking' ? debankingData : alternativesData
 
 				const filteredData = sourceData.filter((item) => {
 					if (item.name && item.name.startsWith('None identified')) return false
-
-					// Dropdown Logic
 					if (filters.country && (!item.country || !item.country.includes(filters.country))) return false
 					if (filters.type && item.type !== filters.type) return false
 					if (filters.person && (!item.people || !item.people.includes(filters.person))) return false
 
-					// Search Logic
 					if (filters.search) {
 						const s = filters.search
 						const matchName = item.name?.toLowerCase().includes(s)
 						const matchDesc = item.description?.toLowerCase().includes(s)
 						const matchPeople = item.people?.some((p) => p.toLowerCase().includes(s))
 						const matchCountry = item.country?.toLowerCase().includes(s)
-
 						if (!matchName && !matchDesc && !matchPeople && !matchCountry) return false
 					}
-
 					return true
 				})
 
-				// Update results count
 				resultsCount.innerText = `Showing ${filteredData.length} ${filteredData.length === 1 ? 'item' : 'items'}`
 
 				if (filteredData.length === 0) {
-					grid.innerHTML = `<div style="text-align:center; color: var(--text-muted); grid-column: 1/-1; padding-top: 40px;">No results found for these filters.</div>`
+					contentArea.innerHTML = `<div style="text-align:center; color: var(--text-muted); grid-column: 1/-1; padding-top: 40px;">No results found for these filters.</div>`
 					return
 				}
 
-				filteredData.forEach((item) => {
+				if (currentLayout === 'grid') {
+					renderGrid(filteredData, contentArea)
+				} else if (currentLayout === 'list') {
+					renderList(filteredData, contentArea)
+				} else if (currentLayout === 'table') {
+					renderTable(filteredData, contentArea)
+				}
+			}
+
+			// 1. Grid Renderer
+			function renderGrid(data, container) {
+				data.forEach((item) => {
 					const card = document.createElement('div')
 					card.className = 'card'
 					if (currentTab === 'debanking') {
@@ -1238,7 +1363,7 @@
 					} else {
 						renderAlternativeCard(card, item)
 					}
-					grid.appendChild(card)
+					container.appendChild(card)
 				})
 			}
 
@@ -1246,30 +1371,12 @@
 				const isRecent = item.year_last && item.year_last >= 2023
 				const flagHtml = getFlagHtml(item.country)
 				const iconHtml = renderIconHtml(item)
-
 				let peopleHtml = ''
 				if (item.people && item.people.length > 0) {
 					peopleHtml = `
                 <div class="people-section">
                     <span class="people-label">Targeted (${item.people.length}):</span>
-                    <div class="people-tags">
-                        ${item.people
-													.map((p) => {
-														// Look for specific source first, then wildcard source
-														const sourceUrl = sourcesMap[`${item.name}|${p}`] || globalSources[p]
-														const linkHtml = sourceUrl
-															? `<a href="${sourceUrl}" target="_blank" class="source-link" title="View Source for ${p} @ ${item.name}" onclick="event.stopPropagation();">
-																<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-																	<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-																	<polyline points="15 3 21 3 21 9"></polyline>
-																	<line x1="10" y1="14" x2="21" y2="3"></line>
-																</svg>
-															   </a>`
-															: ''
-														return `<span class="person-tag" onclick="addFilter('person', '${p}')">${p}${linkHtml}</span>`
-													})
-													.join('')}
-                    </div>
+                    <div class="people-tags">${renderPeopleHtml(item)}</div>
                 </div>`
 				}
 
@@ -1290,14 +1397,12 @@
 												}
                     </div>
                 </div>
-                
                 <div class="meta-tags">
                     <span class="tag tag-type" onclick="addFilter('type', '${item.type}')">${item.type}</span>
                     <span class="tag tag-country" onclick="addFilter('country', '${item.country}')">${flagHtml} ${
 					item.country
 				}</span>
                 </div>
-
                 <div class="description">${item.description}</div>
                 ${peopleHtml}
             `
@@ -1306,12 +1411,10 @@
 			function renderAlternativeCard(card, item) {
 				const flagHtml = getFlagHtml(item.country)
 				const iconHtml = renderIconHtml(item)
-
 				let statusClass = 'status-neutral'
 				if (
-					item.verification_status?.toLowerCase().includes('technical guarantee') ||
-					item.verification_status?.toLowerCase().includes('proven track record') ||
-					item.verification_status?.toLowerCase().includes('reliable')
+					item.verification_status?.toLowerCase().includes('guarantee') ||
+					item.verification_status?.toLowerCase().includes('proven')
 				) {
 					statusClass = 'status-verified'
 				} else if (item.verification_status?.toLowerCase().includes('unverified')) {
@@ -1327,7 +1430,6 @@
 						</div>
                     </div>
                 </div>
-
                 <div class="meta-tags">
                     <span class="tag tag-type" onclick="addFilter('type', '${item.type}')">${item.type}</span>
                     ${
@@ -1336,9 +1438,7 @@
 												: ''
 										}
                 </div>
-
                 <div class="description">${item.description}</div>
-                
                 <div style="margin-top:auto">
                     ${
 											item.verification_status
@@ -1348,6 +1448,147 @@
                     ${item.url ? `<a href="${item.url}" target="_blank" class="alt-link">Visit Website &rarr;</a>` : ''}
                 </div>
             `
+			}
+
+			// 2. List Renderer
+			function renderList(data, container) {
+				const wrapper = document.createElement('div')
+				wrapper.className = 'list-view-container'
+
+				// Group by Type
+				const grouped = data.reduce((acc, item) => {
+					const t = item.type || 'Other'
+					if (!acc[t]) acc[t] = []
+					acc[t].push(item)
+					return acc
+				}, {})
+
+				const sortedKeys = Object.keys(grouped).sort()
+
+				sortedKeys.forEach((type) => {
+					const groupDiv = document.createElement('div')
+					groupDiv.className = 'list-group'
+
+					groupDiv.innerHTML = `<h3>${type}</h3>`
+
+					const ul = document.createElement('div')
+
+					grouped[type].forEach((item) => {
+						const flag = getFlagHtml(item.country)
+						const row = document.createElement('div')
+						row.className = 'list-item'
+
+						let details = ''
+						if (currentTab === 'debanking') {
+							const peopleCount = item.people ? item.people.length : 0
+							if (peopleCount > 0) details = ` &bull; Targeted: ${peopleCount} people`
+						} else {
+							if (item.verification_status) details = ` &bull; ${item.verification_status}`
+						}
+
+						row.innerHTML = `
+							<div class="list-item-header">
+								${
+									item.url
+										? `<a href="${item.url}" target="_blank" style="text-decoration:none; color:inherit; display:flex; gap:10px; align-items:center;">`
+										: ''
+								}
+									<span>${item.name}</span>
+								${item.url ? `</a>` : ''}
+								<span class="tag tag-country" style="margin-left:auto; font-size:0.7rem;">${flag} ${item.country || 'Global'}</span>
+							</div>
+							<div class="list-item-meta">
+								${item.description} ${details}
+							</div>
+						`
+						ul.appendChild(row)
+					})
+
+					groupDiv.appendChild(ul)
+					wrapper.appendChild(groupDiv)
+				})
+
+				container.appendChild(wrapper)
+			}
+
+			// 3. Table Renderer
+			function renderTable(data, container) {
+				const wrapper = document.createElement('div')
+				wrapper.className = 'table-responsive'
+
+				const table = document.createElement('table')
+				table.className = 'data-table'
+
+				let thead = ''
+				if (currentTab === 'debanking') {
+					thead = `<thead>
+						<tr>
+							<th style="width:250px;">Name</th>
+							<th>Type</th>
+							<th>Country</th>
+							<th>Last Incident</th>
+							<th>People Targeted</th>
+						</tr>
+					</thead>`
+				} else {
+					thead = `<thead>
+						<tr>
+							<th style="width:250px;">Name</th>
+							<th>Type</th>
+							<th>Country</th>
+							<th>Status</th>
+							<th>Link</th>
+						</tr>
+					</thead>`
+				}
+
+				const tbody = document.createElement('tbody')
+
+				data.forEach((item) => {
+					const tr = document.createElement('tr')
+					const icon = renderIconHtml(item)
+					const flag = getFlagHtml(item.country)
+
+					if (currentTab === 'debanking') {
+						const peopleLinks =
+							item.people && item.people.length > 0 ? `<div class="people-tags">${renderPeopleHtml(item)}</div>` : '-'
+						tr.innerHTML = `
+							<td>
+								<div class="table-entity-cell">
+									${icon}
+									${item.url ? `<a href="${item.url}" target="_blank">${item.name}</a>` : item.name}
+								</div>
+							</td>
+							<td>${item.type}</td>
+							<td><span style="display:flex; align-items:center; gap:6px;">${flag} ${item.country}</span></td>
+							<td>${item.year_last || '-'}</td>
+							<td>${peopleLinks}</td>
+						`
+					} else {
+						tr.innerHTML = `
+							<td>
+								<div class="table-entity-cell">
+									${icon}
+									${item.url ? `<a href="${item.url}" target="_blank">${item.name}</a>` : item.name}
+								</div>
+							</td>
+							<td>${item.type}</td>
+							<td><span style="display:flex; align-items:center; gap:6px;">${flag} ${item.country || 'Global'}</span></td>
+							<td>${item.verification_status || '-'}</td>
+							<td>${
+								item.url
+									? `<a href="${item.url}" target="_blank" style="color:var(--accent-blue); font-weight:bold;">Visit &rarr;</a>`
+									: ''
+							}</td>
+						`
+					}
+					tbody.appendChild(tr)
+				})
+
+				table.innerHTML = thead
+				table.appendChild(tbody)
+				wrapper.appendChild(table)
+				container.appendChild(wrapper)
 			}
 		</script>
 	</body>
