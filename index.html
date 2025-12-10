@@ -29,10 +29,14 @@
 				--border: #e5e7eb; /* Light Borders */
 
 				--accent-red: #dc2626;
+				--accent-red-hover: #b91c1c;
 				--accent-red-bg: #fef2f2;
+
 				--accent-green: #059669;
 				--accent-green-bg: #ecfdf5;
+
 				--accent-blue: #2563eb;
+				--accent-blue-hover: #1d4ed8;
 				--accent-blue-bg: #eff6ff;
 
 				--font-stack: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -65,10 +69,9 @@
 				text-align: center;
 			}
 
-			/* Toggle Button Styles */
 			.quote-toggle-wrapper {
 				display: flex;
-				justify-content: flex-end; /* Align to right side of quote area */
+				justify-content: flex-end;
 				margin-bottom: 10px;
 			}
 
@@ -117,7 +120,6 @@
 				pointer-events: none;
 			}
 
-			/* Carousel Specifics */
 			.carousel-wrapper {
 				position: relative;
 				width: 100%;
@@ -227,15 +229,21 @@
 				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 			}
 
-			.tab-btn.active {
-				background: var(--text-main);
-				color: white;
-				border-color: var(--text-main);
-			}
-
 			.tab-btn:hover:not(.active) {
 				border-color: var(--text-muted);
 				color: var(--text-main);
+			}
+
+			/* Specific Active Colors */
+			.tab-btn.active#tab-debanking {
+				background-color: var(--accent-red);
+				border-color: var(--accent-red);
+				color: white;
+			}
+			.tab-btn.active#tab-alternatives {
+				background-color: var(--accent-blue);
+				border-color: var(--accent-blue);
+				color: white;
 			}
 
 			/* --- Filters & Search --- */
@@ -279,7 +287,6 @@
 				align-items: center;
 			}
 
-			/* Layout Switcher */
 			.layout-controls {
 				display: flex;
 				background: white;
@@ -322,7 +329,6 @@
 				animation: fadeIn 0.3s ease;
 				box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
 			}
-
 			.filter-badge button {
 				background: none;
 				border: none;
@@ -385,10 +391,10 @@
 				padding: 0 20px;
 			}
 
-			/* Grid Layout (Default) */
+			/* Grid Layout */
 			#contentArea.grid-view {
 				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+				grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
 				gap: 24px;
 			}
 
@@ -451,6 +457,18 @@
 				display: block;
 			}
 
+			/* Smaller icon wrapper for list view */
+			.list-icon-wrapper {
+				width: 32px;
+				height: 32px;
+				flex-shrink: 0;
+				position: relative;
+				border-radius: 6px;
+				overflow: hidden;
+				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+				display: block;
+			}
+
 			.entity-icon {
 				width: 100%;
 				height: 100%;
@@ -462,6 +480,10 @@
 				font-weight: 700;
 				font-size: 1.1rem;
 				border: 1px solid var(--border);
+			}
+
+			.list-icon-wrapper .entity-icon {
+				font-size: 0.8rem;
 			}
 
 			.entity-img {
@@ -658,7 +680,7 @@
 			/* --- List View Styles --- */
 			.list-view-container {
 				background: white;
-				padding: 40px;
+				padding: 20px 40px 40px;
 				border-radius: 12px;
 				border: 1px solid var(--border);
 			}
@@ -671,25 +693,63 @@
 				border-bottom: 2px solid var(--bg-color);
 				padding-bottom: 10px;
 				margin-bottom: 15px;
+				margin-top: 20px;
 			}
 			.list-item {
-				padding: 10px 0;
+				padding: 12px 0;
 				border-bottom: 1px solid var(--bg-color);
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
 			}
 			.list-item:last-child {
 				border-bottom: none;
 			}
 			.list-item-header {
 				font-weight: 700;
-				font-size: 1rem;
+				font-size: 1.05rem;
 				display: flex;
 				align-items: center;
-				gap: 10px;
+				gap: 12px;
 			}
-			.list-item-meta {
-				font-size: 0.85rem;
-				color: var(--text-muted);
+
+			.list-item-details {
+				padding-left: 44px; /* Align with text, offset icon width */
+				font-size: 0.95rem;
+				color: #4b5563;
+			}
+
+			.list-meta-row {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				align-items: center;
 				margin-top: 4px;
+			}
+
+			.targeted-trigger {
+				color: #6366f1; /* Subtle blue/purple */
+				background: #eef2ff;
+				font-size: 0.8rem;
+				font-weight: 600;
+				padding: 2px 8px;
+				border-radius: 4px;
+				cursor: pointer;
+				border: 1px solid transparent;
+				transition: all 0.2s;
+			}
+			.targeted-trigger:hover {
+				background: #e0e7ff;
+				border-color: #c7d2fe;
+			}
+
+			.targeted-expanded {
+				margin-top: 8px;
+				padding: 10px;
+				background: #f9fafb;
+				border-radius: 8px;
+				border: 1px solid var(--border);
+				animation: fadeIn 0.3s ease;
 			}
 
 			/* --- Table View Styles --- */
@@ -702,14 +762,14 @@
 			.data-table {
 				width: 100%;
 				border-collapse: collapse;
-				min-width: 800px; /* Force horizontal scroll on mobile */
+				min-width: 800px;
 			}
 			.data-table th,
 			.data-table td {
 				padding: 14px 20px;
 				border-bottom: 1px solid var(--border);
 				text-align: left;
-				vertical-align: top;
+				vertical-align: middle; /* Better for icons */
 			}
 			.data-table th {
 				background: #f9fafb;
@@ -718,7 +778,20 @@
 				font-size: 0.85rem;
 				text-transform: uppercase;
 				letter-spacing: 0.5px;
+				cursor: pointer;
+				user-select: none;
+				transition: background 0.2s;
 			}
+			.data-table th:hover {
+				background: #f3f4f6;
+				color: var(--text-main);
+			}
+			.sort-indicator {
+				display: inline-block;
+				width: 10px;
+				margin-left: 5px;
+			}
+
 			.data-table tr:last-child td {
 				border-bottom: none;
 			}
@@ -726,15 +799,6 @@
 				background: #fdfdfd;
 			}
 
-			/* Mini icons for table */
-			.data-table .icon-wrapper {
-				width: 32px;
-				height: 32px;
-				border-radius: 6px;
-			}
-			.data-table .entity-icon {
-				font-size: 0.8rem;
-			}
 			.table-entity-cell {
 				display: flex;
 				align-items: center;
@@ -772,7 +836,6 @@
 				text-decoration: underline;
 			}
 
-			/* Floating Scroll Buttons */
 			.scroll-controls {
 				position: fixed;
 				bottom: 30px;
@@ -818,13 +881,33 @@
 			/* Mobile Optimizations */
 			@media (max-width: 768px) {
 				#contentArea.grid-view {
-					grid-template-columns: 1fr;
+					grid-template-columns: 1fr; /* Full width cards */
+					gap: 15px; /* Reduce gap */
 				}
+
+				.card {
+					padding: 20px;
+				} /* Less padding inside cards */
+
 				h1 {
 					font-size: 1.8rem;
 				}
+
+				/* Hide Table Button on Mobile */
+				#btn-table {
+					display: none;
+				}
+
+				.list-view-container {
+					padding: 15px 15px 30px; /* Reduced padding */
+				}
+				.list-item-details {
+					padding-left: 0; /* Reset indentation on small screens */
+					margin-top: 5px;
+				}
+
 				.quote-container {
-					padding: 20px 40px;
+					padding: 20px 30px;
 					border-left-width: 3px;
 				}
 				.quote-text {
@@ -835,15 +918,17 @@
 					font-size: 1.2rem;
 				}
 				.carousel-btn.prev {
-					left: -35px;
+					left: -25px;
 				}
 				.carousel-btn.next {
-					right: -35px;
+					right: -25px;
 				}
+
 				.controls-area {
 					flex-direction: column;
 					align-items: stretch;
 					gap: 15px;
+					padding: 0 15px;
 				}
 				.left-controls {
 					width: 100%;
@@ -864,6 +949,7 @@
 				.search-input {
 					width: 100%;
 				}
+
 				.scroll-controls {
 					bottom: 20px;
 					right: 20px;
@@ -902,8 +988,8 @@
 			</p>
 
 			<div class="tabs">
-				<button class="tab-btn active" onclick="switchTab('debanking')">Debanking List</button>
-				<button class="tab-btn" onclick="switchTab('alternatives')">Alternatives</button>
+				<button id="tab-debanking" class="tab-btn active" onclick="switchTab('debanking')">Debanking List</button>
+				<button id="tab-alternatives" class="tab-btn" onclick="switchTab('alternatives')">Alternatives</button>
 			</div>
 		</header>
 
@@ -1056,8 +1142,19 @@
 				search: null,
 			}
 
+			// Sorting State
+			let sortState = {
+				key: null,
+				direction: 'asc', // or 'desc'
+			}
+
 			document.addEventListener('DOMContentLoaded', () => {
 				initCarousel()
+
+				// Ensure correct layout on mobile load if needed
+				if (window.innerWidth <= 768 && currentLayout === 'table') {
+					currentLayout = 'grid' // Default fallback
+				}
 
 				Promise.all([
 					fetch('debanking.json').then((res) => res.json()),
@@ -1105,6 +1202,7 @@
 			function getFlagHtml(country) {
 				if (!country) return `<img src="https://flagcdn.com/w40/un.png" class="flag-img" alt="Global">`
 				const cleanName = country.split('/')[0].trim().toLowerCase()
+				// Mapping map remains the same
 				const isoMap = {
 					austria: 'at',
 					australia: 'au',
@@ -1151,8 +1249,11 @@
 					: `<img src="https://flagcdn.com/w40/un.png" class="flag-img" alt="Global">`
 			}
 
-			function renderIconHtml(item) {
+			// Modified to accept a size class or style
+			function renderIconHtml(item, isSmall = false) {
 				const monogram = getMonogram(item.name)
+				const wrapperClass = isSmall ? 'list-icon-wrapper' : 'icon-wrapper'
+
 				let content
 				if (item.url) {
 					content = `
@@ -1167,9 +1268,9 @@
 				}
 
 				if (item.url) {
-					return `<a href="${item.url}" target="_blank" class="icon-wrapper" title="Go to ${item.name}">${content}</a>`
+					return `<a href="${item.url}" target="_blank" class="${wrapperClass}" title="Go to ${item.name}">${content}</a>`
 				} else {
-					return `<div class="icon-wrapper">${content}</div>`
+					return `<div class="${wrapperClass}">${content}</div>`
 				}
 			}
 
@@ -1239,12 +1340,15 @@
 
 			function switchTab(tab) {
 				currentTab = tab
+
+				// Reset sort when switching tabs
+				sortState = { key: null, direction: 'asc' }
+
 				document.querySelectorAll('.tab-btn').forEach((btn) => {
-					btn.classList.toggle(
-						'active',
-						btn.innerText.toLowerCase().includes(tab === 'debanking' ? 'debanking' : 'alternatives')
-					)
+					btn.classList.remove('active')
 				})
+				document.getElementById(`tab-${tab}`).classList.add('active')
+
 				clearAllFilters()
 			}
 
@@ -1255,9 +1359,20 @@
 				})
 
 				const contentArea = document.getElementById('contentArea')
-				contentArea.className = '' // Reset class
+				contentArea.className = ''
 				if (layout === 'grid') contentArea.classList.add('grid-view')
 
+				render()
+			}
+
+			function handleSort(key) {
+				if (sortState.key === key) {
+					// Toggle direction
+					sortState.direction = sortState.direction === 'asc' ? 'desc' : 'asc'
+				} else {
+					sortState.key = key
+					sortState.direction = 'asc'
+				}
 				render()
 			}
 
@@ -1292,6 +1407,17 @@
 				render()
 			}
 
+			function togglePeopleList(id) {
+				const el = document.getElementById(id)
+				if (el) {
+					if (el.style.display === 'none') {
+						el.style.display = 'block'
+					} else {
+						el.style.display = 'none'
+					}
+				}
+			}
+
 			// --- Render Logic ---
 
 			function render() {
@@ -1320,7 +1446,7 @@
 
 				const sourceData = currentTab === 'debanking' ? debankingData : alternativesData
 
-				const filteredData = sourceData.filter((item) => {
+				let filteredData = sourceData.filter((item) => {
 					if (item.name && item.name.startsWith('None identified')) return false
 					if (filters.country && (!item.country || !item.country.includes(filters.country))) return false
 					if (filters.type && item.type !== filters.type) return false
@@ -1336,6 +1462,28 @@
 					}
 					return true
 				})
+
+				// Sorting Logic
+				if (sortState.key) {
+					filteredData.sort((a, b) => {
+						let valA = a[sortState.key]
+						let valB = b[sortState.key]
+
+						// Handle array lengths for people count sorting?
+						if (sortState.key === 'people') {
+							valA = a.people ? a.people.length : 0
+							valB = b.people ? b.people.length : 0
+						} else {
+							// String comparison
+							if (valA) valA = valA.toString().toLowerCase()
+							if (valB) valB = valB.toString().toLowerCase()
+						}
+
+						if (valA < valB) return sortState.direction === 'asc' ? -1 : 1
+						if (valA > valB) return sortState.direction === 'asc' ? 1 : -1
+						return 0
+					})
+				}
 
 				resultsCount.innerText = `Showing ${filteredData.length} ${filteredData.length === 1 ? 'item' : 'items'}`
 
@@ -1465,40 +1613,61 @@
 
 				const sortedKeys = Object.keys(grouped).sort()
 
-				sortedKeys.forEach((type) => {
+				sortedKeys.forEach((type, groupIndex) => {
 					const groupDiv = document.createElement('div')
 					groupDiv.className = 'list-group'
-
 					groupDiv.innerHTML = `<h3>${type}</h3>`
 
 					const ul = document.createElement('div')
 
-					grouped[type].forEach((item) => {
+					grouped[type].forEach((item, itemIndex) => {
 						const flag = getFlagHtml(item.country)
+						// Use renderIconHtml with isSmall=true
+						const iconHtml = renderIconHtml(item, true)
+
 						const row = document.createElement('div')
 						row.className = 'list-item'
 
 						let details = ''
+						let expandHtml = ''
+
 						if (currentTab === 'debanking') {
 							const peopleCount = item.people ? item.people.length : 0
-							if (peopleCount > 0) details = ` &bull; Targeted: ${peopleCount} people`
+							if (peopleCount > 0) {
+								const uniqueId = `targeted-list-${groupIndex}-${itemIndex}`
+								const peopleListHtml = renderPeopleHtml(item)
+
+								details = `
+									<div class="list-meta-row">
+										<button class="targeted-trigger" onclick="togglePeopleList('${uniqueId}')">Targeted: ${peopleCount} people</button>
+									</div>
+								`
+								expandHtml = `<div id="${uniqueId}" class="targeted-expanded" style="display:none">
+									<div class="people-tags">${peopleListHtml}</div>
+								</div>`
+							}
 						} else {
-							if (item.verification_status) details = ` &bull; ${item.verification_status}`
+							if (item.verification_status) {
+								details = `<div class="list-meta-row"><small style="color:var(--text-muted)">Status: ${item.verification_status}</small></div>`
+							}
 						}
 
 						row.innerHTML = `
 							<div class="list-item-header">
+								${iconHtml}
 								${
 									item.url
-										? `<a href="${item.url}" target="_blank" style="text-decoration:none; color:inherit; display:flex; gap:10px; align-items:center;">`
-										: ''
+										? `<a href="${item.url}" target="_blank" style="text-decoration:none; color:inherit;">${item.name}</a>`
+										: `<span>${item.name}</span>`
 								}
-									<span>${item.name}</span>
-								${item.url ? `</a>` : ''}
-								<span class="tag tag-country" style="margin-left:auto; font-size:0.7rem;">${flag} ${item.country || 'Global'}</span>
+								<span class="tag tag-country" style="margin-left:auto; font-size:0.7rem;" onclick="addFilter('country', '${
+									item.country
+								}')">${flag} ${item.country || 'Global'}</span>
 							</div>
-							<div class="list-item-meta">
-								${item.description} ${details}
+							<div class="list-item-details">
+								<div>${item.description}</div>
+								${details}
+								${expandHtml}
 							</div>
 						`
 						ul.appendChild(row)
@@ -1519,24 +1688,41 @@
 				const table = document.createElement('table')
 				table.className = 'data-table'
 
+				const getSortIndicator = (key) => {
+					if (sortState.key === key) {
+						return sortState.direction === 'asc' ? '▲' : '▼'
+					}
+					return ''
+				}
+
 				let thead = ''
 				if (currentTab === 'debanking') {
 					thead = `<thead>
 						<tr>
-							<th style="width:250px;">Name</th>
-							<th>Type</th>
-							<th>Country</th>
-							<th>Last Incident</th>
-							<th>People Targeted</th>
+							<th style="width:250px;" onclick="handleSort('name')">Name <span class="sort-indicator">${getSortIndicator(
+								'name'
+							)}</span></th>
+							<th onclick="handleSort('type')">Type <span class="sort-indicator">${getSortIndicator('type')}</span></th>
+							<th onclick="handleSort('country')">Country <span class="sort-indicator">${getSortIndicator('country')}</span></th>
+							<th onclick="handleSort('year_last')">Last Incident <span class="sort-indicator">${getSortIndicator(
+								'year_last'
+							)}</span></th>
+							<th onclick="handleSort('people')">People Targeted <span class="sort-indicator">${getSortIndicator(
+								'people'
+							)}</span></th>
 						</tr>
 					</thead>`
 				} else {
 					thead = `<thead>
 						<tr>
-							<th style="width:250px;">Name</th>
-							<th>Type</th>
-							<th>Country</th>
-							<th>Status</th>
+							<th style="width:250px;" onclick="handleSort('name')">Name <span class="sort-indicator">${getSortIndicator(
+								'name'
+							)}</span></th>
+							<th onclick="handleSort('type')">Type <span class="sort-indicator">${getSortIndicator('type')}</span></th>
+							<th onclick="handleSort('country')">Country <span class="sort-indicator">${getSortIndicator('country')}</span></th>
+							<th onclick="handleSort('verification_status')">Status <span class="sort-indicator">${getSortIndicator(
+								'verification_status'
+							)}</span></th>
 							<th>Link</th>
 						</tr>
 					</thead>`
@@ -1546,7 +1732,7 @@
 
 				data.forEach((item) => {
 					const tr = document.createElement('tr')
-					const icon = renderIconHtml(item)
+					const icon = renderIconHtml(item, true) // Small icon
 					const flag = getFlagHtml(item.country)
 
 					if (currentTab === 'debanking') {
@@ -1559,8 +1745,8 @@
 									${item.url ? `<a href="${item.url}" target="_blank">${item.name}</a>` : item.name}
 								</div>
 							</td>
-							<td>${item.type}</td>
-							<td><span style="display:flex; align-items:center; gap:6px;">${flag} ${item.country}</span></td>
+							<td><span class="tag tag-type" onclick="addFilter('type', '${item.type}')">${item.type}</span></td>
+							<td><span class="tag tag-country" onclick="addFilter('country', '${item.country}')">${flag} ${item.country}</span></td>
 							<td>${item.year_last || '-'}</td>
 							<td>${peopleLinks}</td>
 						`
@@ -1572,8 +1758,10 @@
 									${item.url ? `<a href="${item.url}" target="_blank">${item.name}</a>` : item.name}
 								</div>
 							</td>
-							<td>${item.type}</td>
-							<td><span style="display:flex; align-items:center; gap:6px;">${flag} ${item.country || 'Global'}</span></td>
+							<td><span class="tag tag-type" onclick="addFilter('type', '${item.type}')">${item.type}</span></td>
+							<td><span class="tag tag-country" onclick="addFilter('country', '${item.country}')">${flag} ${
+							item.country || 'Global'
+						}</span></td>
 							<td>${item.verification_status || '-'}</td>
 							<td>${
 								item.url
