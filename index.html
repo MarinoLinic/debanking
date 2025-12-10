@@ -389,7 +389,6 @@
 				margin-bottom: 4px;
 			}
 
-			/* New: Make name clickable without looking like a default blue link */
 			.entity-name a {
 				color: inherit;
 				text-decoration: none;
@@ -494,12 +493,33 @@
 				transition: all 0.2s;
 				border: 1px solid transparent;
 				font-weight: 500;
+				display: inline-flex;
+				align-items: center;
+				gap: 4px;
 			}
 
 			.person-tag:hover {
 				background: white;
 				border-color: var(--accent-red);
 				color: var(--accent-red);
+			}
+
+			/* Minimalist Source Link Style */
+			.source-link {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				color: var(--text-muted);
+				text-decoration: none;
+				font-size: 0.7rem;
+				margin-left: 2px;
+				opacity: 0.6;
+				transition: all 0.2s;
+			}
+			.source-link:hover {
+				opacity: 1;
+				color: var(--accent-blue);
+				transform: scale(1.1);
 			}
 
 			/* Alternatives Specifics */
@@ -768,6 +788,8 @@
 			// State
 			let debankingData = []
 			let alternativesData = []
+			let sourcesMap = {} // Maps "Entity|Person" -> URL
+			let globalSources = {} // Maps "Person" -> URL (for wildcards)
 			let currentTab = 'debanking' // 'debanking' or 'alternatives'
 
 			let filters = {
@@ -782,8 +804,19 @@
 				Promise.all([
 					fetch('debanking.json').then((res) => res.json()),
 					fetch('debanking_alternatives.json').then((res) => res.json()),
+					fetch('sources.json').then((res) => res.json()),
 				])
-					.then(([debanking, alternatives]) => {
+					.then(([debanking, alternatives, sources]) => {
+						// Process Sources
+						sources.forEach((src) => {
+							if (src.entity === '*') {
+								globalSources[src.person] = src.url
+							} else {
+								// Create composite key
+								sourcesMap[`${src.entity}|${src.person}`] = src.url
+							}
+						})
+
 						// Order debanking by number of people affected (Descending)
 						debankingData = debanking.sort((a, b) => {
 							const countA = a.people ? a.people.length : 0
@@ -1064,7 +1097,14 @@
                     <span class="people-label">Targeted (${item.people.length}):</span>
                     <div class="people-tags">
                         ${item.people
-													.map((p) => `<span class="person-tag" onclick="addFilter('person', '${p}')">${p}</span>`)
+													.map((p) => {
+														// Look for specific source first, then wildcard source
+														const sourceUrl = sourcesMap[`${item.name}|${p}`] || globalSources[p]
+														const linkHtml = sourceUrl
+															? `<a href="${sourceUrl}" target="_blank" class="source-link" title="View Source for ${p} @ ${item.name}" onclick="event.stopPropagation();">↗</a>`
+															: ''
+														return `<span class="person-tag" onclick="addFilter('person', '${p}')">${p}${linkHtml}</span>`
+													})
 													.join('')}
                     </div>
                 </div>`

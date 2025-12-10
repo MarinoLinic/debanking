@@ -1,0 +1,57 @@
+[
+	{
+		"person": "Martin Sellner",
+		"entity": "*",
+		"url": "https://x.com/Martin_Sellner/status/1998445528636400104"
+	},
+	{
+		"entity": "Coutts",
+		"person": "Nigel Farage",
+		"url": "https://en.wikipedia.org/wiki/Nigel_Farage_Coutts_bank_scandal"
+	},
+	{
+		"entity": "NatWest",
+		"person": "Nigel Farage",
+		"url": "https://en.wikipedia.org/wiki/Nigel_Farage_Coutts_bank_scandal"
+	},
+	{
+		"entity": "JPMorgan Chase",
+		"person": "Nigel Farage",
+		"url": "https://www.telegraph.co.uk/news/2023/07/19/nigel-farage-debanked-coutts-chase-bank-rejected/"
+	},
+	{
+		"entity": "HSBC",
+		"person": "Marine Le Pen",
+		"url": "https://www.theguardian.com/world/2017/nov/22/hsbc-closes-marine-le-pen-bank-account-banking-fatwa"
+	},
+	{
+		"entity": "Société Générale",
+		"person": "Marine Le Pen",
+		"url": "https://www.liberation.fr/actualites/2017/11/22/viree-de-hsbc-et-de-la-societe-generale-le-pen-denonce-une-fatwa-bancaire-contre-le-fn_1611810/"
+	},
+	{
+		"entity": "HSBC",
+		"person": "Tommy Robinson",
+		"url": "https://www.nelsonslaw.co.uk/tommy-robinson-finances/"
+	},
+	{
+		"entity": "NatWest",
+		"person": "Tommy Robinson",
+		"url": "https://www.nelsonslaw.co.uk/tommy-robinson-finances/"
+	},
+	{
+		"entity": "Lloyds Bank",
+		"person": "Tommy Robinson",
+		"url": "https://www.nelsonslaw.co.uk/tommy-robinson-finances/"
+	},
+	{
+		"entity": "Deutsche Bank",
+		"person": "Donald Trump",
+		"url": "https://www.theguardian.com/business/2021/jan/12/deutsche-bank-severs-ties-with-donald-trump"
+	},
+	{
+		"entity": "Signature Bank",
+		"person": "Donald Trump",
+		"url": "https://www.nbcnews.com/business/business-news/trump-s-top-bankers-deutsche-banks-signature-cut-future-ties-n1253895"
+	}
+]

@@ -117,7 +117,7 @@
 		"region": "Western Europe",
 		"people": ["Nigel Farage"],
 		"description": "A prestigious private bank owned by NatWest Group. Center of the 2023 debanking scandal involving Farage.",
-		"year_last": null,
+		"year_last": 2023,
 		"url": "https://www.coutts.com"
 	},
 	{
@@ -128,7 +128,7 @@
 		"region": "Western Europe",
 		"people": ["Nigel Farage", "Tommy Robinson"],
 		"description": "A major UK retail and commercial bank.",
-		"year_last": null,
+		"year_last": 2023,
 		"url": "https://www.natwest.com"
 	},
 	{
@@ -315,7 +315,7 @@
 		"region": "North America",
 		"people": ["Donald Trump"],
 		"description": "A New York-based commercial bank that closed Trump's accounts in 2021 (Bank failed in 2023).",
-		"year_last": null,
+		"year_last": 2021,
 		"url": "https://www.signatureny.com"
 	},
 	{
@@ -381,7 +381,7 @@
 		"region": "Central Europe",
 		"people": ["Donald Trump"],
 		"description": "A leading German global banking and financial services company.",
-		"year_last": null,
+		"year_last": 2021,
 		"url": "https://www.db.com"
 	},
 	{
