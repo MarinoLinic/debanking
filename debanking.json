@@ -99,17 +99,6 @@
 		"url": "https://www.dad.at"
 	},
 	{
-		"name": "Wüstenrot",
-		"type": "Traditional Bank",
-		"subtype": "Building Society",
-		"country": "Austria",
-		"region": "Central Europe",
-		"people": ["Martin Sellner"],
-		"description": "Financial services group focusing on building savings and insurance.",
-		"year_last": null,
-		"url": "https://www.wuestenrot.at"
-	},
-	{
 		"name": "Axos Bank",
 		"type": "Traditional Bank",
 		"subtype": "Digital Bank",
@@ -473,17 +462,6 @@
 		"url": "https://www.medirect.com.mt"
 	},
 	{
-		"name": "C24 Bank",
-		"type": "Neobank",
-		"subtype": "Consumer",
-		"country": "Germany",
-		"region": "Central Europe",
-		"people": ["Martin Sellner"],
-		"description": "A fully licensed digital bank operated by the Check24 comparison portal.",
-		"year_last": null,
-		"url": "https://www.c24.de"
-	},
-	{
 		"name": "N26",
 		"type": "Neobank",
 		"subtype": "Consumer",
@@ -636,17 +614,6 @@
 		"description": "A fintech providing payment accounts to those excluded from traditional banking.",
 		"year_last": null,
 		"url": "https://www.sogexia.com"
-	},
-	{
-		"name": "Xapo Bank",
-		"type": "Neobank",
-		"subtype": "Crypto/Fiat",
-		"country": "Gibraltar",
-		"region": "Southern Europe",
-		"people": ["Martin Sellner"],
-		"description": "A bitcoin-enabled bank licensed in Gibraltar.",
-		"year_last": null,
-		"url": "https://www.xapo.com"
 	},
 	{
 		"name": "Genome",
@@ -1056,17 +1023,6 @@
 		"url": "https://www.bitpanda.com"
 	},
 	{
-		"name": "Bitfinex",
-		"type": "Cryptocurrency",
-		"subtype": "Exchange",
-		"country": "BVI/Hong Kong",
-		"region": "Global",
-		"people": ["Martin Sellner"],
-		"description": "A major cryptocurrency exchange (identified by green leaf logo).",
-		"year_last": null,
-		"url": "https://www.bitfinex.com"
-	},
-	{
 		"name": "Bitcoin.de",
 		"type": "Cryptocurrency",
 		"subtype": "Exchange",
@@ -1120,17 +1076,6 @@
 		"description": "Payment gateway for blockchain payments.",
 		"year_last": null,
 		"url": "https://coingate.com"
-	},
-	{
-		"name": "Uphold",
-		"type": "Cryptocurrency",
-		"subtype": "Exchange",
-		"country": "USA",
-		"region": "Global",
-		"people": ["Martin Sellner"],
-		"description": "Digital money platform and commodities exchange.",
-		"year_last": null,
-		"url": "https://uphold.com"
 	},
 	{
 		"name": "Kriptomat",
