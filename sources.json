@@ -53,5 +53,25 @@
 		"entity": "Signature Bank",
 		"person": "Donald Trump",
 		"url": "https://www.nbcnews.com/business/business-news/trump-s-top-bankers-deutsche-banks-signature-cut-future-ties-n1253895"
+	},
+	{
+		"entity": "JPMorgan Chase",
+		"person": "Kanye West",
+		"url": "https://www.bbc.com/news/business-63252035"
+	},
+	{
+		"entity": "Postbank",
+		"person": "AfD",
+		"url": "https://www.welt.de/finanzen/article247698012/AfD-Chef-Chrupalla-Konto-gekuendigt-weil-ich-AfD-Mitglied-bin-Das-sagt-die-Postbank.html"
+	},
+	{
+		"entity": "Volksbank",
+		"person": "AfD",
+		"url": "https://www.handelsblatt.com/finanzen/banken-versicherungen/banken/banken-zwei-volksbanken-aus-ostwestfalen-kuendigen-konten-der-afd/100173262.html"
+	},
+	{
+		"entity": "GLS Bank",
+		"person": "AfD",
+		"url": "https://taz.de/GLS-Bank-zu-AfD-naher-Stiftung/!5507138/"
 	}
 ]

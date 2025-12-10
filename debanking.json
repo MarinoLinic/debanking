@@ -396,17 +396,6 @@
 		"url": "https://www.postbank.de"
 	},
 	{
-		"name": "Commerzbank",
-		"type": "Traditional Bank",
-		"subtype": "Commercial Bank",
-		"country": "Germany",
-		"region": "Central Europe",
-		"people": ["AfD", "Jürgen Elsässer"],
-		"description": "A major German bank that has closed accounts for Alternative für Deutschland and Compact Magazine.",
-		"year_last": null,
-		"url": "https://www.commerzbank.de"
-	},
-	{
 		"name": "GLS Bank",
 		"type": "Traditional Bank",
 		"subtype": "Ethical Bank",
@@ -414,7 +403,7 @@
 		"region": "Central Europe",
 		"people": ["AfD"],
 		"description": "An ethical bank that publicly announced the termination of AfD party accounts.",
-		"year_last": null,
+		"year_last": 2018,
 		"url": "https://www.gls.de"
 	},
 	{
@@ -1367,10 +1356,10 @@
 		"name": "DonationAlerts",
 		"type": "Crowdfunding",
 		"subtype": "Streamer Donations",
-		"country": "Hong Kong",
+		"country": "Netherlands",
 		"region": "Global",
 		"people": ["Martin Sellner"],
-		"description": "A service for streamers to receive donations and alerts, owned by My.com B.V.",
+		"description": "A service for streamers to receive donations and alerts, owned by My.com B.V. at the time of service termination.",
 		"year_last": null,
 		"url": "https://www.donationalerts.com"
 	}
