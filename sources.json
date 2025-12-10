@@ -195,6 +195,16 @@
 		"url": "https://www.texaspolicy.com/usaa-scorns-its-trump-voting-members-by-debanking-the-lawyer-who-defended-him/"
 	},
 	{
+		"entity": "BankUnited",
+		"person": "Donald Trump",
+		"url": "https://thehill.com/policy/finance/banking-financial-institutions/535282-florida-bank-says-it-has-closed-trumps-accounts/"
+	},
+	{
+		"entity": "Professional Bank",
+		"person": "Donald Trump",
+		"url": "https://thehill.com/policy/finance/banking-financial-institutions/535282-florida-bank-says-it-has-closed-trumps-accounts/"
+	},
+	{
 		"entity": "Bank of America",
 		"person": "John Eastman",
 		"url": "https://dailycaller.com/2024/04/16/john-eastman-donald-trump-attorney-debanked-bank-of-america-usaa/"
