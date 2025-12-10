@@ -143,17 +143,6 @@
 		"url": "https://www.lloydsbank.com"
 	},
 	{
-		"name": "Santander",
-		"type": "Traditional Bank",
-		"subtype": "Global Bank",
-		"country": "UK/Spain",
-		"region": "Western Europe",
-		"people": ["Tommy Robinson"],
-		"description": "A Spanish multinational financial services company with a major UK presence.",
-		"year_last": null,
-		"url": "https://www.santander.com"
-	},
-	{
 		"name": "Tatra Banka",
 		"type": "Traditional Bank",
 		"subtype": "Commercial Bank",
