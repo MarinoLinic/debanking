@@ -1,0 +1,322 @@
+[
+	{
+		"name": "Fio banka",
+		"type": "Traditional Bank",
+		"subtype": "Commercial Bank",
+		"country": "Czech Republic",
+		"region": "Central Europe",
+		"url": "https://www.fio.cz/",
+		"description": "A Czech bank known for offering 'transparent accounts' where transaction history is publicly viewable. Note: This recommendation comes from unverified user reports on X/Twitter and has not been vetted for robust free-speech policies.",
+		"verification_status": "Unverified user recommendation"
+	},
+	{
+		"name": "Old Glory Bank",
+		"type": "Traditional Bank",
+		"subtype": "Commercial Bank",
+		"country": "USA",
+		"region": "North America",
+		"url": "https://oldglorybank.com/",
+		"description": "A customized banking solution explicitly founded to uphold constitutional rights and oppose debanking based on political views.",
+		"verification_status": "Company Charter/Mission"
+	},
+	{
+		"name": "None identified (Cooperative Bank)",
+		"type": "Traditional Bank",
+		"subtype": "Cooperative Bank",
+		"country": null,
+		"region": null,
+		"url": null,
+		"description": "No specific cooperative bank with a verified free-speech charter identified.",
+		"verification_status": null
+	},
+	{
+		"name": "None identified (Savings Bank)",
+		"type": "Traditional Bank",
+		"subtype": "Savings Bank",
+		"country": null,
+		"region": null,
+		"url": null,
+		"description": "No specific savings bank with a verified free-speech charter identified.",
+		"verification_status": null
+	},
+	{
+		"name": "None identified (Regional Bank)",
+		"type": "Traditional Bank",
+		"subtype": "Regional Bank",
+		"country": null,
+		"region": null,
+		"url": null,
+		"description": "No specific regional bank with a verified free-speech charter identified.",
+		"verification_status": null
+	},
+	{
+		"name": "None identified (Mortgage Bank)",
+		"type": "Traditional Bank",
+		"subtype": "Mortgage Bank",
+		"country": null,
+		"region": null,
+		"url": null,
+		"description": "No specific mortgage bank with a verified free-speech charter identified.",
+		"verification_status": null
+	},
+	{
+		"name": "None identified (Building Society)",
+		"type": "Traditional Bank",
+		"subtype": "Building Society",
+		"country": null,
+		"region": null,
+		"url": null,
+		"description": "No specific building society with a verified free-speech charter identified.",
+		"verification_status": null
+	},
+	{
+		"name": "None identified (Private Bank)",
+		"type": "Traditional Bank",
+		"subtype": "Private Bank",
+		"country": null,
+		"region": null,
+		"url": null,
+		"description": "No private bank identified; private banks (like Coutts) have historically been high-risk for debanking PEPs.",
+		"verification_status": null
+	},
+	{
+		"name": "None identified (Ethical Bank)",
+		"type": "Traditional Bank",
+		"subtype": "Ethical Bank",
+		"country": null,
+		"region": null,
+		"url": null,
+		"description": "Most 'Ethical Banks' (like GLS) align with progressive causes and have explicitly debanked right-wing entities.",
+		"verification_status": null
+	},
+	{
+		"name": "Coign",
+		"type": "Traditional Bank",
+		"subtype": "Credit Card",
+		"country": "USA",
+		"region": "North America",
+		"url": "https://coign.com/",
+		"description": "A credit card issuer built for conservatives, offering cash back rewards that support conservative charities.",
+		"verification_status": "Company Mission"
+	},
+	{
+		"name": "Monerium",
+		"type": "Neobank",
+		"subtype": "Consumer/Blockchain",
+		"country": "Iceland/Europe",
+		"region": "Western Europe",
+		"url": "https://monerium.com/",
+		"description": "An authorized Electronic Money Institution (EMI) that issues regulated digital Euros (EURe) on the blockchain. It provides a personal IBAN, allowing users to bridge fiat directly to a self-custodial wallet, minimizing the risk of funds being frozen in a centralized app.",
+		"verification_status": "Technical Solution"
+	},
+	{
+		"name": "Mercury (US Only)",
+		"type": "Neobank",
+		"subtype": "Business",
+		"country": "USA",
+		"region": "North America",
+		"url": "https://mercury.com/",
+		"description": "Focused on startups. Not explicitly 'free speech', but generally more agnostic than major traditional banks. (Still subject to US regulations).",
+		"verification_status": "Neutral"
+	},
+	{
+		"name": "None identified (Sustainable)",
+		"type": "Neobank",
+		"subtype": "Sustainable Banking",
+		"country": null,
+		"region": null,
+		"url": null,
+		"description": "Sustainable banks generally align with ESG metrics that flag right-wing actors as risks.",
+		"verification_status": null
+	},
+	{
+		"name": "AMINA Bank",
+		"type": "Neobank",
+		"subtype": "Crypto/Fiat",
+		"country": "Switzerland",
+		"region": "Central Europe",
+		"url": "https://www.aminagroup.com/",
+		"description": "A fully licensed Swiss crypto bank (formerly SEBA Bank) bridging digital and traditional assets. Offers a regulated environment for holding crypto and fiat.",
+		"verification_status": "Neutral"
+	},
+	{
+		"name": "GabPay",
+		"type": "Payment Processor",
+		"subtype": "Gateway/Wallet",
+		"country": "USA",
+		"region": "North America",
+		"url": "https://www.gabpay.com/",
+		"description": "A payment processing platform built by Gab.com specifically to offer an alternative to PayPal and Stripe for banned users.",
+		"verification_status": "Explicitly Free Speech"
+	},
+	{
+		"name": "Parallel Economy",
+		"type": "Payment Processor",
+		"subtype": "Gateway",
+		"country": "USA",
+		"region": "North America",
+		"url": "https://www.paralleleconomy.com/",
+		"description": "A payment gateway backed by Dan Bongino, designed to be censorship-resistant for businesses.",
+		"verification_status": "Explicitly Free Speech"
+	},
+	{
+		"name": "AlignPay",
+		"type": "Payment Processor",
+		"subtype": "Gateway",
+		"country": "USA",
+		"region": "North America",
+		"url": "https://alignpay.com/",
+		"description": "Payment processing solution built to stop cancel culture and debanking.",
+		"verification_status": "Explicitly Free Speech"
+	},
+	{
+		"name": "BTCPay Server",
+		"type": "Payment Processor",
+		"subtype": "Gateway/Crypto",
+		"country": "Global",
+		"region": "Global",
+		"url": "https://btcpayserver.org/",
+		"description": "A self-hosted, open-source cryptocurrency payment processor. It eliminates third-party intermediaries, making it impossible to be debanked.",
+		"verification_status": "Technical Guarantee"
+	},
+	{
+		"name": "None identified (Direct Debit)",
+		"type": "Payment Processor",
+		"subtype": "Direct Debit",
+		"country": null,
+		"region": null,
+		"url": null,
+		"description": "Direct debit is deeply integrated into the legacy banking system; no independent 'free speech' layer exists.",
+		"verification_status": null
+	},
+	{
+		"name": "Strike",
+		"type": "Remittance",
+		"subtype": "Money Transfer",
+		"country": "USA/Global",
+		"region": "Global",
+		"url": "https://strike.me/",
+		"description": "Uses the Bitcoin Lightning Network for instant global remittance, bypassing Swift/SEPA messaging controls.",
+		"verification_status": "High Reliability"
+	},
+	{
+		"name": "Bisq",
+		"type": "Cryptocurrency",
+		"subtype": "Exchange",
+		"country": "Global",
+		"region": "Global",
+		"url": "https://bisq.network/",
+		"description": "A decentralized peer-to-peer bitcoin exchange. No central server, no KYC, and no ability for a company to ban users.",
+		"verification_status": "Technical Guarantee"
+	},
+	{
+		"name": "Hodl Hodl",
+		"type": "Cryptocurrency",
+		"subtype": "Exchange",
+		"country": "Global",
+		"region": "Global",
+		"url": "https://hodlhodl.com/",
+		"description": "A non-custodial P2P Bitcoin trading platform that does not hold funds.",
+		"verification_status": "High Reliability"
+	},
+	{
+		"name": "ThorChain",
+		"type": "Cryptocurrency",
+		"subtype": "Exchange",
+		"country": "Global",
+		"region": "Global",
+		"url": "https://thorchain.org/",
+		"description": "Decentralized liquidity protocol allowing native swapping of assets (like BTC to ETH) without a centralized exchange.",
+		"verification_status": "Technical Guarantee"
+	},
+	{
+		"name": "Samourai Wallet / Sparrow Wallet",
+		"type": "Cryptocurrency",
+		"subtype": "Wallet",
+		"country": "Global",
+		"region": "Global",
+		"url": "https://sparrowwallet.com/",
+		"description": "Self-custody wallets focusing on privacy and coin control, ensuring funds cannot be frozen by third parties.",
+		"verification_status": "Technical Guarantee"
+	},
+	{
+		"name": "Coincards",
+		"type": "E-Wallet",
+		"subtype": "Prepaid Card",
+		"country": "USA/Canada",
+		"region": "North America",
+		"url": "https://coincards.com/",
+		"description": "Allows purchase of gift cards and prepaid cards using cryptocurrency, bypassing direct bank debanking.",
+		"verification_status": "Reliable"
+	},
+	{
+		"name": "Interactive Brokers",
+		"type": "Investing",
+		"subtype": "Broker",
+		"country": "USA",
+		"region": "Global",
+		"url": "https://www.interactivebrokers.com/",
+		"description": "While a large institution, IBKR is known for its professional/neutral stance compared to retail apps like Robinhood, though not explicitly anti-debanking.",
+		"verification_status": "Neutral"
+	},
+	{
+		"name": "GiveSendGo",
+		"type": "Crowdfunding",
+		"subtype": "Personal/Charity",
+		"country": "USA",
+		"region": "North America",
+		"url": "https://www.givesendgo.com/",
+		"description": "The primary alternative to GoFundMe. Explicitly allows campaigns banned on other platforms (e.g., Freedom Convoy, Rittenhouse).",
+		"verification_status": "Proven Track Record"
+	},
+	{
+		"name": "4fund",
+		"type": "Crowdfunding",
+		"subtype": "Personal/Charity",
+		"country": "Poland",
+		"region": "Central Europe",
+		"url": "https://4fund.com/",
+		"description": "A crowdfunding platform (zrzutka.pl) offering fewer restrictions than US-based alternatives. Note: This recommendation comes from unverified user reports on X/Twitter and has not been vetted for robust free-speech policies.",
+		"verification_status": "Unverified user recommendation"
+	},
+	{
+		"name": "SubscribeStar",
+		"type": "Crowdfunding",
+		"subtype": "Membership",
+		"country": "USA",
+		"region": "Global",
+		"url": "https://www.subscribestar.com/",
+		"description": "Membership platform serving as an alternative to Patreon. Hosts many creators who have been deplatformed elsewhere.",
+		"verification_status": "Proven Track Record"
+	},
+	{
+		"name": "Locals",
+		"type": "Crowdfunding",
+		"subtype": "Membership",
+		"country": "USA",
+		"region": "Global",
+		"url": "https://locals.com/",
+		"description": "A community platform (merged with Rumble) allowing creators to publish content and receive subscription support independent of Big Tech.",
+		"verification_status": "Explicitly Free Speech"
+	},
+	{
+		"name": "Tallycoin",
+		"type": "Crowdfunding",
+		"subtype": "Project",
+		"country": "Global",
+		"region": "Global",
+		"url": "https://tallyco.in/",
+		"description": "A crowdfunding platform built on the Bitcoin blockchain. No middlemen to freeze funds.",
+		"verification_status": "Technical Guarantee"
+	},
+	{
+		"name": "None identified (Lending)",
+		"type": "Fintech",
+		"subtype": "Lending",
+		"country": null,
+		"region": null,
+		"url": null,
+		"description": "No 'anti-woke' or free-speech specific lending fintechs identified.",
+		"verification_status": null
+	}
+]
