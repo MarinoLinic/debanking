@@ -50,6 +50,31 @@
 				text-align: center;
 			}
 
+			/* Toggle Button Styles */
+			.quote-toggle-wrapper {
+				display: flex;
+				justify-content: flex-end; /* Align to right side of quote area */
+				margin-bottom: 10px;
+			}
+
+			.toggle-btn {
+				background: transparent;
+				border: none;
+				color: var(--text-muted);
+				font-size: 0.85rem;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				padding: 0;
+				transition: color 0.2s;
+			}
+
+			.toggle-btn:hover {
+				color: var(--accent-blue);
+				text-decoration: underline;
+			}
+
 			.quote-container {
 				background: linear-gradient(180deg, rgba(220, 38, 38, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
 				border-left: 4px solid var(--accent-red);
@@ -60,6 +85,22 @@
 				position: relative;
 				background-color: white;
 				box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+				/* Transition properties for toggling */
+				transition: all 0.3s ease-in-out;
+				max-height: 500px; /* Max height for animation */
+				opacity: 1;
+				overflow: hidden;
+			}
+
+			.quote-container.hidden {
+				max-height: 0;
+				opacity: 0;
+				margin-bottom: 20px; /* Reduce margin when hidden */
+				padding-top: 0;
+				padding-bottom: 0;
+				border-left-width: 0;
+				pointer-events: none;
 			}
 
 			.quote-text {
@@ -139,7 +180,7 @@
 				display: flex;
 				flex-wrap: wrap;
 				gap: 15px;
-				align-items: flex-start; /* Changed from center to accommodate vertical stacking in left-controls */
+				align-items: flex-start;
 				justify-content: space-between;
 			}
 
@@ -148,7 +189,7 @@
 				flex-direction: column;
 				gap: 10px;
 				flex: 1;
-				min-width: 200px; /* Prevent crushing */
+				min-width: 200px;
 			}
 
 			.results-count {
@@ -161,7 +202,7 @@
 				display: flex;
 				gap: 10px;
 				flex-wrap: wrap;
-				min-height: 32px; /* Prevent jumping when empty */
+				min-height: 32px;
 			}
 
 			.filter-group {
@@ -563,7 +604,7 @@
 				h1 {
 					font-size: 1.8rem;
 				}
-				/* Optimized Mobile Quote */
+
 				.quote-container {
 					padding: 15px 20px;
 					border-left-width: 3px;
@@ -575,6 +616,9 @@
 				}
 				.quote-source {
 					font-size: 0.8rem;
+				}
+				.quote-toggle-wrapper {
+					margin-bottom: 5px;
 				}
 
 				.controls-area {
@@ -610,7 +654,13 @@
 		<a id="top"></a>
 
 		<header>
-			<div class="quote-container">
+			<!-- Toggle Button Area -->
+			<div class="quote-toggle-wrapper">
+				<button id="quoteToggleBtn" class="toggle-btn" onclick="toggleQuote()">Hide Quote Context</button>
+			</div>
+
+			<!-- Collapsible Quote Container -->
+			<div id="quoteContainer" class="quote-container">
 				<div class="quote-text">
 					<p>
 						"If you are a Somali immigrant who had your own daughters gruesomely mutilated:<br />
@@ -689,6 +739,22 @@
 		</div>
 
 		<script>
+			// Toggle Quote Visibility
+			function toggleQuote() {
+				const container = document.getElementById('quoteContainer')
+				const btn = document.getElementById('quoteToggleBtn')
+
+				// Toggle the class
+				container.classList.toggle('hidden')
+
+				// Update button text
+				if (container.classList.contains('hidden')) {
+					btn.innerText = 'Show Quote Context'
+				} else {
+					btn.innerText = 'Hide Quote Context'
+				}
+			}
+
 			// State
 			let debankingData = []
 			let alternativesData = []
