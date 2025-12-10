@@ -348,7 +348,7 @@
 		"region": "North America",
 		"people": ["Gab (Andrew Torba)"],
 		"description": "An American bank based in Norwich, New York.",
-		"year_last": null,
+		"year_last": 2021,
 		"url": "https://www.nbtbank.com"
 	},
 	{
@@ -359,18 +359,18 @@
 		"region": "North America",
 		"people": ["Gab (Andrew Torba)"],
 		"description": "A Florida-based bank that terminated Gab's business account.",
-		"year_last": null,
+		"year_last": 2021,
 		"url": "https://www.citynational.com"
 	},
 	{
-		"name": "ECCU Bank",
+		"name": "ECCU Bank (Evangelical Christian Credit Union)",
 		"type": "Traditional Bank",
 		"subtype": "Credit Union",
 		"country": "USA",
 		"region": "North America",
 		"people": ["Gab (Andrew Torba)"],
 		"description": "Evangelical Christian Credit Union.",
-		"year_last": null,
+		"year_last": 2021,
 		"url": "https://www.eccu.org"
 	},
 	{
