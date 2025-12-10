@@ -7,7 +7,7 @@
 		"region": "Central Europe",
 		"people": ["Martin Sellner"],
 		"description": "A major Austrian bank and member of the UniCredit group.",
-		"year_last": 2019,
+		"year_last": null,
 		"url": "https://www.bankaustria.at"
 	},
 	{
@@ -18,7 +18,7 @@
 		"region": "Central Europe",
 		"people": ["Martin Sellner"],
 		"description": "One of the leading banking groups in Austria and Central/Eastern Europe.",
-		"year_last": 2024,
+		"year_last": null,
 		"url": "https://www.raiffeisen.at"
 	},
 	{
@@ -29,7 +29,7 @@
 		"region": "Central Europe",
 		"people": ["Martin Sellner"],
 		"description": "A major financial service provider in Central and Eastern Europe.",
-		"year_last": 2019,
+		"year_last": null,
 		"url": "https://www.erstebank.at"
 	},
 	{
@@ -40,7 +40,7 @@
 		"region": "Central Europe",
 		"people": ["Martin Sellner", "Jürgen Elsässer"],
 		"description": "The generic brand for public savings banks in German-speaking countries.",
-		"year_last": 2021,
+		"year_last": null,
 		"url": "https://www.sparkasse.at"
 	},
 	{
@@ -73,7 +73,7 @@
 		"region": "Central Europe",
 		"people": ["Martin Sellner", "AfD"],
 		"description": "A network of cooperative banks. The Berliner Volksbank famously cancelled accounts for the AfD.",
-		"year_last": 2018,
+		"year_last": null,
 		"url": "https://www.volksbank.at"
 	},
 	{
@@ -117,7 +117,7 @@
 		"region": "North America",
 		"people": ["Alex Jones"],
 		"description": "A federally chartered digital-first bank in the United States.",
-		"year_last": 2023,
+		"year_last": null,
 		"url": "https://www.axosbank.com"
 	},
 	{
@@ -128,7 +128,7 @@
 		"region": "Western Europe",
 		"people": ["Nigel Farage"],
 		"description": "A prestigious private bank owned by NatWest Group. Center of the 2023 debanking scandal involving Farage.",
-		"year_last": 2023,
+		"year_last": null,
 		"url": "https://www.coutts.com"
 	},
 	{
@@ -139,7 +139,7 @@
 		"region": "Western Europe",
 		"people": ["Nigel Farage", "Tommy Robinson"],
 		"description": "A major UK retail and commercial bank.",
-		"year_last": 2023,
+		"year_last": null,
 		"url": "https://www.natwest.com"
 	},
 	{
@@ -150,7 +150,7 @@
 		"region": "Western Europe",
 		"people": ["Tommy Robinson", "Katie Hopkins"],
 		"description": "One of the 'Big Four' clearing banks in the UK.",
-		"year_last": 2018,
+		"year_last": null,
 		"url": "https://www.lloydsbank.com"
 	},
 	{
@@ -161,7 +161,7 @@
 		"region": "Western Europe",
 		"people": ["Katie Hopkins"],
 		"description": "A British multinational universal bank.",
-		"year_last": 2018,
+		"year_last": null,
 		"url": "https://www.barclays.co.uk"
 	},
 	{
@@ -172,7 +172,7 @@
 		"region": "Western Europe",
 		"people": ["Katie Hopkins"],
 		"description": "A British high street bank known for its retail-focused model.",
-		"year_last": 2019,
+		"year_last": null,
 		"url": "https://www.metrobankonline.co.uk"
 	},
 	{
@@ -183,7 +183,7 @@
 		"region": "Western Europe",
 		"people": ["Tommy Robinson"],
 		"description": "A Spanish multinational financial services company with a major UK presence.",
-		"year_last": 2018,
+		"year_last": null,
 		"url": "https://www.santander.com"
 	},
 	{
@@ -249,7 +249,7 @@
 		"region": "Western Europe",
 		"people": ["Marine Le Pen"],
 		"description": "A major French multinational investment and banking services company. Closed accounts of the National Front (now National Rally).",
-		"year_last": 2017,
+		"year_last": null,
 		"url": "https://www.societegenerale.com"
 	},
 	{
@@ -260,7 +260,7 @@
 		"region": "Eastern Europe",
 		"people": ["Martin Sellner"],
 		"description": "Russian state-owned bank. Its European arm collapsed following 2022 sanctions.",
-		"year_last": 2021,
+		"year_last": null,
 		"url": "https://www.sberbank.ru"
 	},
 	{
@@ -282,7 +282,7 @@
 		"region": "Western Europe",
 		"people": ["Martin Sellner", "Marine Le Pen", "Tommy Robinson"],
 		"description": "One of the largest banking organizations in the world. Closed personal accounts of Le Pen and Robinson.",
-		"year_last": 2017,
+		"year_last": null,
 		"url": "https://www.hsbc.com"
 	},
 	{
@@ -293,7 +293,7 @@
 		"region": "North America",
 		"people": ["Kanye West", "Nick Fuentes", "Laura Loomer", "Nigel Farage", "Eric Trump", "Jordan Peterson"],
 		"description": "The largest bank in the US. Debanked Kanye West (Ye) and Fuentes; Chase UK refused/closed accounts for Farage and Peterson.",
-		"year_last": 2024,
+		"year_last": null,
 		"url": "https://www.jpmorganchase.com"
 	},
 	{
@@ -304,7 +304,7 @@
 		"region": "North America",
 		"people": ["Nick Fuentes", "Laura Loomer"],
 		"description": "A major American multinational financial services company.",
-		"year_last": 2021,
+		"year_last": null,
 		"url": "https://www.wellsfargo.com"
 	},
 	{
@@ -315,7 +315,7 @@
 		"region": "North America",
 		"people": ["Donald Trump"],
 		"description": "A major American multinational investment bank and financial services holding company.",
-		"year_last": 2024,
+		"year_last": null,
 		"url": "https://www.bankofamerica.com"
 	},
 	{
@@ -326,7 +326,7 @@
 		"region": "North America",
 		"people": ["Donald Trump"],
 		"description": "A New York-based commercial bank that closed Trump's accounts in 2021 (Bank failed in 2023).",
-		"year_last": 2021,
+		"year_last": null,
 		"url": "https://www.signatureny.com"
 	},
 	{
@@ -337,7 +337,7 @@
 		"region": "North America",
 		"people": ["Eric Trump"],
 		"description": "An American bank holding company specializing in credit cards and banking.",
-		"year_last": 2021,
+		"year_last": null,
 		"url": "https://www.capitalone.com"
 	},
 	{
@@ -348,7 +348,7 @@
 		"region": "North America",
 		"people": ["James O’Keefe"],
 		"description": "US bank that froze the funds of Project Veritas.",
-		"year_last": 2023,
+		"year_last": null,
 		"url": "https://www.mtb.com"
 	},
 	{
@@ -359,7 +359,7 @@
 		"region": "North America",
 		"people": ["Melania Trump"],
 		"description": "Florida-based bank reported to have closed the former First Lady's accounts.",
-		"year_last": 2024,
+		"year_last": null,
 		"url": "https://www.bankunited.com"
 	},
 	{
@@ -370,7 +370,7 @@
 		"region": "North America",
 		"people": ["Gab (Andrew Torba)"],
 		"description": "An American bank based in Norwich, New York.",
-		"year_last": 2021,
+		"year_last": null,
 		"url": "https://www.nbtbank.com"
 	},
 	{
@@ -381,7 +381,7 @@
 		"region": "North America",
 		"people": ["Gab (Andrew Torba)"],
 		"description": "A Florida-based bank that terminated Gab's business account.",
-		"year_last": 2021,
+		"year_last": null,
 		"url": "https://www.citynational.com"
 	},
 	{
@@ -392,7 +392,7 @@
 		"region": "North America",
 		"people": ["Gab (Andrew Torba)"],
 		"description": "Evangelical Christian Credit Union.",
-		"year_last": 2021,
+		"year_last": null,
 		"url": "https://www.eccu.org"
 	},
 	{
@@ -403,7 +403,7 @@
 		"region": "Central Europe",
 		"people": ["Donald Trump"],
 		"description": "A leading German global banking and financial services company.",
-		"year_last": 2021,
+		"year_last": null,
 		"url": "https://www.db.com"
 	},
 	{
@@ -414,7 +414,7 @@
 		"region": "Central Europe",
 		"people": ["Martin Sellner", "AfD", "Jürgen Elsässer"],
 		"description": "A branch of Deutsche Bank focusing on retail customers. Frequently cited in political account closures.",
-		"year_last": 2021,
+		"year_last": null,
 		"url": "https://www.postbank.de"
 	},
 	{
@@ -425,7 +425,7 @@
 		"region": "Central Europe",
 		"people": ["AfD", "Jürgen Elsässer"],
 		"description": "A major German bank that has closed accounts for Alternative für Deutschland and Compact Magazine.",
-		"year_last": 2022,
+		"year_last": null,
 		"url": "https://www.commerzbank.de"
 	},
 	{
@@ -436,7 +436,7 @@
 		"region": "Central Europe",
 		"people": ["AfD"],
 		"description": "An ethical bank that publicly announced the termination of AfD party accounts.",
-		"year_last": 2018,
+		"year_last": null,
 		"url": "https://www.gls.de"
 	},
 	{
@@ -447,7 +447,7 @@
 		"region": "Central Europe",
 		"people": ["Martin Sellner"],
 		"description": "The financial services unit of Swiss Post.",
-		"year_last": 2024,
+		"year_last": null,
 		"url": "https://www.postfinance.ch"
 	},
 	{
@@ -491,7 +491,7 @@
 		"region": "Central Europe",
 		"people": ["Martin Sellner"],
 		"description": "A leading mobile bank headquartered in Berlin.",
-		"year_last": 2024,
+		"year_last": null,
 		"url": "https://n26.com"
 	},
 	{
@@ -502,7 +502,7 @@
 		"region": "Western Europe",
 		"people": ["Martin Sellner"],
 		"description": "A global financial superapp offering banking, crypto, and trading.",
-		"year_last": 2020,
+		"year_last": null,
 		"url": "https://www.revolut.com"
 	},
 	{
@@ -546,7 +546,7 @@
 		"region": "Central Europe",
 		"people": ["Martin Sellner"],
 		"description": "A Swiss finance app launched by PostFinance and Swissquote.",
-		"year_last": 2024,
+		"year_last": null,
 		"url": "https://www.yuh.com"
 	},
 	{
@@ -557,7 +557,7 @@
 		"region": "Central Europe",
 		"people": ["Martin Sellner"],
 		"description": "A digital-only bank known for community banking (Ceased operations in 2023).",
-		"year_last": 2023,
+		"year_last": null,
 		"url": "https://www.fidor.de"
 	},
 	{
@@ -821,7 +821,7 @@
 		"region": "Global",
 		"people": ["Martin Sellner", "Nick Fuentes", "Laura Loomer"],
 		"description": "Financial infrastructure platform for the internet. Banned Fuentes and Loomer from processing payments.",
-		"year_last": 2019,
+		"year_last": null,
 		"url": "https://stripe.com"
 	},
 	{
@@ -832,7 +832,7 @@
 		"region": "Global",
 		"people": ["Martin Sellner", "Tommy Robinson", "Nick Fuentes", "Laura Loomer", "Free Speech Union", "Visegrád 24"],
 		"description": "A multinational financial technology company operating an online payments system. Known for widespread bans.",
-		"year_last": 2022,
+		"year_last": null,
 		"url": "https://www.paypal.com"
 	},
 	{
@@ -843,7 +843,7 @@
 		"region": "North America",
 		"people": ["Laura Loomer", "Nick Fuentes"],
 		"description": "Mobile payment service owned by PayPal.",
-		"year_last": 2019,
+		"year_last": null,
 		"url": "https://venmo.com"
 	},
 	{
@@ -920,7 +920,7 @@
 		"region": "Global",
 		"people": ["Martin Sellner", "Nick Fuentes"],
 		"description": "Service allowing merchants to accept cryptocurrency payments.",
-		"year_last": 2019,
+		"year_last": null,
 		"url": "https://commerce.coinbase.com"
 	},
 	{
@@ -964,7 +964,7 @@
 		"region": "Western Europe",
 		"people": ["Martin Sellner"],
 		"description": "A tech company for international money transfers.",
-		"year_last": 2024,
+		"year_last": null,
 		"url": "https://wise.com"
 	},
 	{
@@ -1019,7 +1019,7 @@
 		"region": "Global",
 		"people": ["Martin Sellner", "Nick Fuentes"],
 		"description": "One of the largest cryptocurrency exchanges. Removed Fuentes' ability to transact.",
-		"year_last": 2019,
+		"year_last": null,
 		"url": "https://www.coinbase.com"
 	},
 	{
@@ -1041,7 +1041,7 @@
 		"region": "Global",
 		"people": ["Martin Sellner"],
 		"description": "The world's largest cryptocurrency exchange.",
-		"year_last": 2021,
+		"year_last": null,
 		"url": "https://www.binance.com"
 	},
 	{
@@ -1085,7 +1085,7 @@
 		"region": "Global",
 		"people": ["Martin Sellner"],
 		"description": "Integrated cryptocurrency wallet within the Telegram messenger.",
-		"year_last": 2023,
+		"year_last": null,
 		"url": "https://wallet.tg"
 	},
 	{
@@ -1096,7 +1096,7 @@
 		"region": "Central Europe",
 		"people": ["Martin Sellner"],
 		"description": "Blockchain banking service (Defunct).",
-		"year_last": 2022,
+		"year_last": null,
 		"url": "https://nuri.com"
 	},
 	{
@@ -1305,7 +1305,7 @@
 		"region": "Global",
 		"people": ["Martin Sellner"],
 		"description": "Global crowdfunding platform for creative projects.",
-		"year_last": 2018,
+		"year_last": null,
 		"url": "https://www.kickstarter.com"
 	},
 	{
@@ -1316,7 +1316,7 @@
 		"region": "Global",
 		"people": ["Martin Sellner", "Freedom Convoy", "Laura Loomer"],
 		"description": "For-profit crowdfunding platform. Banned Loomer and froze Freedom Convoy funds.",
-		"year_last": 2022,
+		"year_last": null,
 		"url": "https://www.gofundme.com"
 	},
 	{
@@ -1327,7 +1327,7 @@
 		"region": "Global",
 		"people": ["Martin Sellner"],
 		"description": "Membership platform for content creators.",
-		"year_last": 2018,
+		"year_last": null,
 		"url": "https://www.patreon.com"
 	},
 	{
