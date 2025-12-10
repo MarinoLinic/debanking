@@ -131,7 +131,7 @@
 				color: var(--text-main);
 			}
 
-			/* --- Filters --- */
+			/* --- Filters & Search --- */
 			.controls-area {
 				max-width: 1200px;
 				margin: 0 auto 30px;
@@ -146,6 +146,13 @@
 			.active-filters {
 				display: flex;
 				gap: 10px;
+				flex-wrap: wrap;
+			}
+
+			.filter-group {
+				display: flex;
+				gap: 10px;
+				margin-left: auto;
 				flex-wrap: wrap;
 			}
 
@@ -192,7 +199,7 @@
 				border: 1px solid var(--border);
 				padding: 8px 12px;
 				border-radius: 8px;
-				min-width: 160px;
+				min-width: 150px;
 				font-family: inherit;
 				font-size: 0.9rem;
 				cursor: pointer;
@@ -200,6 +207,23 @@
 			}
 			select.custom-select:hover {
 				border-color: #9ca3af;
+			}
+
+			/* Search Input */
+			.search-input {
+				background: white;
+				color: var(--text-main);
+				border: 1px solid var(--border);
+				padding: 8px 12px;
+				border-radius: 8px;
+				min-width: 200px;
+				font-family: inherit;
+				font-size: 0.9rem;
+				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+			}
+			.search-input:focus {
+				outline: 2px solid var(--accent-blue);
+				border-color: transparent;
 			}
 
 			/* --- Grid Layout --- */
@@ -232,14 +256,37 @@
 				border-color: #d1d5db;
 			}
 
+			/* Top Right Ribbon Badge */
+			.status-badge {
+				position: absolute;
+				top: 18px;
+				right: -32px;
+				transform: rotate(45deg);
+				width: 120px;
+				text-align: center;
+				font-size: 0.65rem;
+				font-weight: 800;
+				padding: 4px 0;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+				z-index: 2;
+			}
+			.status-badge.red {
+				background-color: #fee2e2; /* Very light red */
+				color: #991b1b; /* Dark red */
+				border-bottom: 1px solid rgba(220, 38, 38, 0.1);
+			}
+
 			.card-top-row {
 				display: flex;
 				gap: 15px;
 				margin-bottom: 15px;
 				align-items: flex-start;
+				padding-right: 40px; /* Space for the top-right badge */
 			}
 
-			/* Icons & Logos - FIXED SIZING */
+			/* Icons & Logos */
 			.icon-wrapper {
 				width: 48px;
 				height: 48px;
@@ -248,7 +295,7 @@
 				border-radius: 10px;
 				overflow: hidden;
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-				display: block; /* Ensures links take up dimensions */
+				display: block;
 			}
 
 			.entity-icon {
@@ -271,7 +318,7 @@
 				background: white;
 				padding: 4px;
 				border: 1px solid var(--border);
-				display: block; /* Removes inline gap */
+				display: block;
 			}
 
 			.entity-info {
@@ -493,6 +540,7 @@
 				}
 			}
 
+			/* Mobile Optimizations */
 			@media (max-width: 768px) {
 				.grid-container {
 					grid-template-columns: 1fr;
@@ -500,19 +548,33 @@
 				h1 {
 					font-size: 1.8rem;
 				}
+				/* Optimized Mobile Quote */
 				.quote-container {
-					padding: 20px;
+					padding: 15px 20px;
+					border-left-width: 3px;
 				}
+				.quote-text {
+					font-size: 0.9rem;
+					line-height: 1.4;
+					margin-bottom: 10px;
+				}
+				.quote-source {
+					font-size: 0.8rem;
+				}
+
 				.controls-area {
 					flex-direction: column;
 					align-items: stretch;
-					gap: 10px;
+					gap: 15px;
 				}
-				.controls-area > div {
+				.filter-group {
 					flex-direction: column;
 					width: 100%;
+					margin-left: 0;
+					gap: 10px;
 				}
-				select.custom-select {
+				select.custom-select,
+				.search-input {
 					width: 100%;
 				}
 				.scroll-controls {
@@ -561,7 +623,14 @@
 				<!-- Filter badges injected here -->
 			</div>
 
-			<div style="display: flex; gap: 10px; margin-left: auto; flex-wrap: wrap">
+			<div class="filter-group">
+				<input
+					type="text"
+					id="searchInput"
+					class="search-input"
+					placeholder="Search names, people, desc..."
+					oninput="handleSearch(this.value)"
+				/>
 				<select id="countrySelect" class="custom-select" onchange="addFilter('country', this.value)">
 					<option value="">All Countries</option>
 				</select>
@@ -585,8 +654,8 @@
 
 		<!-- Footer -->
 		<footer>
-			Created by <strong>Marino Linić</strong> &bull;
-			<a href="https://x.com/MarinoLinic" target="_blank">X (Twitter)</a> &bull;
+			Created by <strong>Marino Linich</strong> &bull; <a href="https://x.com/MarinoLinic" target="_blank">X</a> &bull;
+			<a href="https://github.com/MarinoLinic/debanking" target="_blank">GitHub</a> &bull;
 			<a href="https://marinolinich.substack.com/" target="_blank">Substack</a>
 		</footer>
 
@@ -608,6 +677,7 @@
 				person: null,
 				type: null,
 				country: null,
+				search: null,
 			}
 
 			// Initialize
@@ -695,12 +765,8 @@
 			}
 
 			// Helper: Unified Icon Renderer
-			// Handles fetching favicon, fallbacks, and optional linking
 			function renderIconHtml(item) {
 				const monogram = getMonogram(item.name)
-
-				// Content is the Image (with Monogram fallback hidden)
-				// or just the Monogram if no URL
 				let content
 				if (item.url) {
 					content = `
@@ -714,7 +780,6 @@
 					content = `<div class="entity-icon">${monogram}</div>`
 				}
 
-				// Wrapper is <a> if URL exists, <div> otherwise
 				if (item.url) {
 					return `<a href="${item.url}" target="_blank" class="icon-wrapper" title="Go to ${item.name}">${content}</a>`
 				} else {
@@ -775,6 +840,8 @@
 						btn.innerText.toLowerCase().includes(tab === 'debanking' ? 'debanking' : 'alternatives')
 					)
 				})
+				// Keep filters/search active when switching? Usually better to clear or keep.
+				// For now we clear to avoid confusion.
 				clearAllFilters()
 			}
 
@@ -796,11 +863,17 @@
 				render()
 			}
 
+			function handleSearch(val) {
+				filters.search = val ? val.toLowerCase() : null
+				render()
+			}
+
 			function clearAllFilters() {
-				filters = { person: null, type: null, country: null }
+				filters = { person: null, type: null, country: null, search: null }
 				document.getElementById('countrySelect').value = ''
 				document.getElementById('typeSelect').value = ''
 				document.getElementById('personSelect').value = ''
+				document.getElementById('searchInput').value = ''
 				render()
 			}
 
@@ -814,25 +887,45 @@
 				filterContainer.innerHTML = ''
 
 				let hasFilters = false
-				for (const [key, value] of Object.entries(filters)) {
-					if (value) {
+
+				// Render badges for dropdown filters
+				const dropdownKeys = ['person', 'type', 'country']
+				dropdownKeys.forEach((key) => {
+					if (filters[key]) {
 						hasFilters = true
 						const badge = document.createElement('div')
 						badge.className = 'filter-badge'
 						let label = key === 'person' ? 'Target' : key.charAt(0).toUpperCase() + key.slice(1)
-						badge.innerHTML = `<span>${label}: ${value}</span> <button onclick="removeFilter('${key}')">×</button>`
+						badge.innerHTML = `<span>${label}: ${filters[key]}</span> <button onclick="removeFilter('${key}')">×</button>`
 						filterContainer.appendChild(badge)
 					}
-				}
+				})
+
+				if (filters.search) hasFilters = true
+
 				clearBtn.style.display = hasFilters ? 'block' : 'none'
 
 				const sourceData = currentTab === 'debanking' ? debankingData : alternativesData
 
 				const filteredData = sourceData.filter((item) => {
 					if (item.name && item.name.startsWith('None identified')) return false
+
+					// Dropdown Logic
 					if (filters.country && (!item.country || !item.country.includes(filters.country))) return false
 					if (filters.type && item.type !== filters.type) return false
 					if (filters.person && (!item.people || !item.people.includes(filters.person))) return false
+
+					// Search Logic
+					if (filters.search) {
+						const s = filters.search
+						const matchName = item.name?.toLowerCase().includes(s)
+						const matchDesc = item.description?.toLowerCase().includes(s)
+						const matchPeople = item.people?.some((p) => p.toLowerCase().includes(s))
+						const matchCountry = item.country?.toLowerCase().includes(s)
+
+						if (!matchName && !matchDesc && !matchPeople && !matchCountry) return false
+					}
+
 					return true
 				})
 
@@ -872,6 +965,7 @@
 				}
 
 				card.innerHTML = `
+				<div class="status-badge red">Debanked</div>
                 <div class="card-top-row">
                     ${iconHtml}
                     <div class="entity-info">
