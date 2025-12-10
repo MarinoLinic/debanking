@@ -60,6 +60,21 @@
 		"url": "https://www.nbcnews.com/business/business-news/trump-s-top-bankers-deutsche-banks-signature-cut-future-ties-n1253895"
 	},
 	{
+		"entity": "Bank of America",
+		"person": "Donald Trump",
+		"url": "https://www.texaspolicy.com/usaa-scorns-its-trump-voting-members-by-debanking-the-lawyer-who-defended-him/"
+	},
+	{
+		"entity": "Bank of America",
+		"person": "John Eastman",
+		"url": "https://dailycaller.com/2024/04/16/john-eastman-donald-trump-attorney-debanked-bank-of-america-usaa/"
+	},
+	{
+		"entity": "USAA",
+		"person": "John Eastman",
+		"url": "https://dailycaller.com/2024/04/16/john-eastman-donald-trump-attorney-debanked-bank-of-america-usaa/"
+	},
+	{
 		"entity": "JPMorgan Chase",
 		"person": "Kanye West",
 		"url": "https://www.bbc.com/news/business-63252035"
