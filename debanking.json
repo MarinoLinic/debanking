@@ -280,7 +280,7 @@
 		"subtype": "Global Bank",
 		"country": "USA",
 		"region": "North America",
-		"people": ["Kanye West", "Nick Fuentes", "Laura Loomer", "Nigel Farage", "Eric Trump", "Jordan Peterson"],
+		"people": ["Kanye West", "Nick Fuentes", "Laura Loomer", "Nigel Farage"],
 		"description": "The largest bank in the US. Debanked Kanye West (Ye) and Fuentes; Chase UK refused/closed accounts for Farage and Peterson.",
 		"year_last": null,
 		"url": "https://www.jpmorganchase.com"
@@ -317,17 +317,6 @@
 		"description": "A New York-based commercial bank that closed Trump's accounts in 2021 (Bank failed in 2023).",
 		"year_last": null,
 		"url": "https://www.signatureny.com"
-	},
-	{
-		"name": "Capital One",
-		"type": "Traditional Bank",
-		"subtype": "Commercial Bank",
-		"country": "USA",
-		"region": "North America",
-		"people": ["Eric Trump"],
-		"description": "An American bank holding company specializing in credit cards and banking.",
-		"year_last": null,
-		"url": "https://www.capitalone.com"
 	},
 	{
 		"name": "M&T Bank",
