@@ -1296,5 +1296,93 @@
 		"description": "Austrian internet portal that historically offered co-branded financial products.",
 		"year_last": null,
 		"url": "https://www.free.at"
+	},
+	{
+		"name": "Bilderlings",
+		"type": "Fintech",
+		"subtype": "Business Banking",
+		"country": "UK",
+		"region": "Western Europe",
+		"people": ["Martin Sellner"],
+		"description": "A British fintech platform offering business accounts and cross-border payments.",
+		"year_last": null,
+		"url": "https://bilderlings.com"
+	},
+	{
+		"name": "FlexOffers",
+		"type": "Other",
+		"subtype": "Affiliate Network",
+		"country": "USA",
+		"region": "North America",
+		"people": ["Martin Sellner"],
+		"description": "An award-winning affiliate marketing network that processes payments for publishers.",
+		"year_last": null,
+		"url": "https://www.flexoffers.com"
+	},
+	{
+		"name": "Smartbroker+",
+		"type": "Investing",
+		"subtype": "Broker",
+		"country": "Germany",
+		"region": "Central Europe",
+		"people": ["Martin Sellner"],
+		"description": "A German online broker offering trading of stocks, ETFs, and funds.",
+		"year_last": null,
+		"url": "https://www.smartbrokerplus.de"
+	},
+	{
+		"name": "PKO Bank Polski",
+		"type": "Traditional Bank",
+		"subtype": "Commercial Bank",
+		"country": "Poland",
+		"region": "Central Europe",
+		"people": ["Martin Sellner"],
+		"description": "The largest commercial bank in Poland.",
+		"year_last": null,
+		"url": "https://www.pkobp.pl"
+	},
+	{
+		"name": "Alpha Bank",
+		"type": "Traditional Bank",
+		"subtype": "Commercial Bank",
+		"country": "Greece",
+		"region": "Southern Europe",
+		"people": ["Martin Sellner"],
+		"description": "One of the leading banking groups in Greece.",
+		"year_last": null,
+		"url": "https://www.alpha.gr"
+	},
+	{
+		"name": "Mistertango",
+		"type": "Neobank",
+		"subtype": "Payment Service",
+		"country": "Lithuania",
+		"region": "Northern Europe",
+		"people": ["Martin Sellner"],
+		"description": "A Lithuanian fintech offering payment accounts and IBANs.",
+		"year_last": null,
+		"url": "https://www.mistertango.com"
+	},
+	{
+		"name": "VIALET",
+		"type": "Neobank",
+		"subtype": "Business/Consumer",
+		"country": "Lithuania",
+		"region": "Northern Europe",
+		"people": ["Martin Sellner"],
+		"description": "A financial services provider offering current accounts and payment card solutions.",
+		"year_last": null,
+		"url": "https://www.vialet.eu"
+	},
+	{
+		"name": "DonationAlerts",
+		"type": "Crowdfunding",
+		"subtype": "Streamer Donations",
+		"country": "Netherlands/Russia",
+		"region": "Global",
+		"people": ["Martin Sellner"],
+		"description": "A service for streamers to receive donations and alerts, owned by My.com B.V.",
+		"year_last": null,
+		"url": "https://www.donationalerts.com"
 	}
 ]
