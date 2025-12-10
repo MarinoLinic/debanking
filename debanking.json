@@ -137,32 +137,10 @@
 		"subtype": "Commercial Bank",
 		"country": "UK",
 		"region": "Western Europe",
-		"people": ["Tommy Robinson", "Katie Hopkins"],
+		"people": ["Tommy Robinson"],
 		"description": "One of the 'Big Four' clearing banks in the UK.",
 		"year_last": null,
 		"url": "https://www.lloydsbank.com"
-	},
-	{
-		"name": "Barclays",
-		"type": "Traditional Bank",
-		"subtype": "Commercial Bank",
-		"country": "UK",
-		"region": "Western Europe",
-		"people": ["Katie Hopkins"],
-		"description": "A British multinational universal bank.",
-		"year_last": null,
-		"url": "https://www.barclays.co.uk"
-	},
-	{
-		"name": "Metro Bank",
-		"type": "Traditional Bank",
-		"subtype": "Retail Bank",
-		"country": "UK",
-		"region": "Western Europe",
-		"people": ["Katie Hopkins"],
-		"description": "A British high street bank known for its retail-focused model.",
-		"year_last": null,
-		"url": "https://www.metrobankonline.co.uk"
 	},
 	{
 		"name": "Santander",
@@ -315,7 +293,7 @@
 		"region": "North America",
 		"people": ["Nick Fuentes"],
 		"description": "One of the largest banks in the United States.",
-		"year_last": null,
+		"year_last": 2022,
 		"url": "https://www.usbank.com"
 	},
 	{
@@ -326,7 +304,7 @@
 		"region": "North America",
 		"people": ["Nick Fuentes"],
 		"description": "A US-based bank headquartered in Illinois.",
-		"year_last": null,
+		"year_last": 2022,
 		"url": "https://www.bylinebank.com/"
 	},
 	{
@@ -337,7 +315,7 @@
 		"region": "North America",
 		"people": ["Nick Fuentes"],
 		"description": "One of the largest banks in the United States, headquartered in Cincinnati, Ohio.",
-		"year_last": null,
+		"year_last": 2022,
 		"url": "https://www.53.com"
 	},
 	{
