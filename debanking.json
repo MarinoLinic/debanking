@@ -302,7 +302,7 @@
 		"subtype": "Global Bank",
 		"country": "USA",
 		"region": "North America",
-		"people": ["Kanye West", "Nick Fuentes", "Laura Loomer", "Nigel Farage", "Donald Trump", "Jordan Peterson"],
+		"people": ["Kanye West", "Nick Fuentes", "Laura Loomer", "Nigel Farage", "Eric Trump", "Jordan Peterson"],
 		"description": "The largest bank in the US. Debanked Kanye West (Ye) and Fuentes; Chase UK refused/closed accounts for Farage and Peterson.",
 		"year_last": 2024,
 		"url": "https://www.jpmorganchase.com"
@@ -346,7 +346,7 @@
 		"subtype": "Commercial Bank",
 		"country": "USA",
 		"region": "North America",
-		"people": ["Donald Trump"],
+		"people": ["Eric Trump"],
 		"description": "An American bank holding company specializing in credit cards and banking.",
 		"year_last": 2021,
 		"url": "https://www.capitalone.com"
@@ -731,15 +731,7 @@
 		"subtype": "Wallet",
 		"country": "USA",
 		"region": "Global",
-		"people": [
-			"Martin Sellner",
-			"Tommy Robinson",
-			"Nigel Farage",
-			"Nick Fuentes",
-			"Laura Loomer",
-			"Free Speech Union",
-			"Visegrád 24"
-		],
+		"people": ["Martin Sellner", "Tommy Robinson", "Nick Fuentes", "Laura Loomer", "Free Speech Union", "Visegrád 24"],
 		"description": "A multinational financial technology company operating an online payments system. Known for widespread bans.",
 		"year_last": 2022,
 		"url": "https://www.paypal.com"

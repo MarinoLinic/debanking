@@ -139,14 +139,29 @@
 				display: flex;
 				flex-wrap: wrap;
 				gap: 15px;
-				align-items: center;
+				align-items: flex-start; /* Changed from center to accommodate vertical stacking in left-controls */
 				justify-content: space-between;
+			}
+
+			.left-controls {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				flex: 1;
+				min-width: 200px; /* Prevent crushing */
+			}
+
+			.results-count {
+				font-size: 0.95rem;
+				font-weight: 600;
+				color: var(--text-muted);
 			}
 
 			.active-filters {
 				display: flex;
 				gap: 10px;
 				flex-wrap: wrap;
+				min-height: 32px; /* Prevent jumping when empty */
 			}
 
 			.filter-group {
@@ -567,6 +582,9 @@
 					align-items: stretch;
 					gap: 15px;
 				}
+				.left-controls {
+					width: 100%;
+				}
 				.filter-group {
 					flex-direction: column;
 					width: 100%;
@@ -619,8 +637,11 @@
 
 		<!-- Filter Controls -->
 		<div class="controls-area">
-			<div class="active-filters" id="activeFilters">
-				<!-- Filter badges injected here -->
+			<div class="left-controls">
+				<div id="resultsCount" class="results-count">Loading...</div>
+				<div class="active-filters" id="activeFilters">
+					<!-- Filter badges injected here -->
+				</div>
 			</div>
 
 			<div class="filter-group">
@@ -882,6 +903,7 @@
 				const grid = document.getElementById('grid')
 				const filterContainer = document.getElementById('activeFilters')
 				const clearBtn = document.getElementById('clearBtn')
+				const resultsCount = document.getElementById('resultsCount')
 
 				grid.innerHTML = ''
 				filterContainer.innerHTML = ''
@@ -928,6 +950,9 @@
 
 					return true
 				})
+
+				// Update results count
+				resultsCount.innerText = `Showing ${filteredData.length} ${filteredData.length === 1 ? 'item' : 'items'}`
 
 				if (filteredData.length === 0) {
 					grid.innerHTML = `<div style="text-align:center; color: var(--text-muted); grid-column: 1/-1; padding-top: 40px;">No results found for these filters.</div>`
