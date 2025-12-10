@@ -4,6 +4,21 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Debanking Tracker</title>
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+		<!-- Social Media / Open Graph -->
+		<meta property="og:title" content="Debanking Tracker" />
+		<meta
+			property="og:description"
+			content="Monitoring the weaponization of the banking system and providing alternatives."
+		/>
+		<meta property="og:image" content="image.jpg" />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="image.jpg" />
+
 		<style>
 			:root {
 				/* Light Mode Variables */
@@ -78,29 +93,54 @@
 			.quote-container {
 				background: linear-gradient(180deg, rgba(220, 38, 38, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
 				border-left: 4px solid var(--accent-red);
-				padding: 30px;
+				/* Increased padding-left/right to 80px to stop text overlapping arrows */
+				padding: 30px 80px;
 				margin-bottom: 40px;
 				border-radius: 0 8px 8px 0;
 				text-align: left;
 				position: relative;
 				background-color: white;
 				box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-
-				/* Transition properties for toggling */
 				transition: all 0.3s ease-in-out;
-				max-height: 500px; /* Max height for animation */
+				min-height: 140px; /* Prevent jumpiness */
 				opacity: 1;
 				overflow: hidden;
 			}
 
 			.quote-container.hidden {
 				max-height: 0;
+				min-height: 0;
 				opacity: 0;
-				margin-bottom: 20px; /* Reduce margin when hidden */
+				margin-bottom: 20px;
 				padding-top: 0;
 				padding-bottom: 0;
 				border-left-width: 0;
 				pointer-events: none;
+			}
+
+			/* Carousel Specifics */
+			.carousel-wrapper {
+				position: relative;
+				width: 100%;
+				height: 100%;
+			}
+
+			.quote-slide {
+				display: none;
+				animation: fadeEffect 0.6s;
+			}
+
+			.quote-slide.active {
+				display: block;
+			}
+
+			@keyframes fadeEffect {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
 			}
 
 			.quote-text {
@@ -108,10 +148,6 @@
 				font-style: italic;
 				color: var(--text-main);
 				margin-bottom: 15px;
-			}
-
-			.quote-text p {
-				margin-bottom: 10px;
 			}
 
 			.quote-source {
@@ -128,6 +164,36 @@
 				color: var(--accent-red);
 			}
 
+			/* Carousel Nav Buttons */
+			.carousel-btn {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background: none;
+				border: none;
+				color: #9ca3af; /* Lighter gray by default */
+				font-size: 1.8rem; /* Slightly larger */
+				cursor: pointer;
+				padding: 10px;
+				transition: all 0.2s;
+				z-index: 10;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+			}
+			.carousel-btn:hover {
+				color: var(--accent-red);
+				background-color: rgba(0, 0, 0, 0.03);
+			}
+			/* Moved slightly closer to edge (0px) since padding is large enough now */
+			.carousel-btn.prev {
+				left: -70px;
+			}
+			.carousel-btn.next {
+				right: -70px;
+			}
+
 			h1 {
 				font-size: 2.5rem;
 				font-weight: 800;
@@ -139,6 +205,9 @@
 				color: var(--text-muted);
 				margin-bottom: 30px;
 				font-weight: 500;
+				max-width: 700px;
+				margin-left: auto;
+				margin-right: auto;
 			}
 
 			/* --- Navigation Tabs --- */
@@ -648,7 +717,8 @@
 				}
 
 				.quote-container {
-					padding: 15px 20px;
+					/* Increased mobile padding as well to safely clear arrows */
+					padding: 20px 40px;
 					border-left-width: 3px;
 				}
 				.quote-text {
@@ -661,6 +731,18 @@
 				}
 				.quote-toggle-wrapper {
 					margin-bottom: 5px;
+				}
+
+				.carousel-btn {
+					padding: 5px;
+					font-size: 1.2rem;
+				}
+				/* Ensure arrows stick to very edge on mobile to maximize text space */
+				.carousel-btn.prev {
+					left: -35px;
+				}
+				.carousel-btn.next {
+					right: -35px;
 				}
 
 				.controls-area {
@@ -701,21 +783,22 @@
 				<button id="quoteToggleBtn" class="toggle-btn" onclick="toggleQuote()">Hide Quote Context</button>
 			</div>
 
-			<!-- Collapsible Quote Container -->
-			<div id="quoteContainer" class="quote-container">
-				<div class="quote-text">
-					<p>
-						Debanking for political speech is clearly a human rights issue, but it has never, not once, been tried as
-						such by the entire human rights NGO world.
-					</p>
+			<!-- Collapsible Quote Carousel -->
+			<div id="quoteContainer" class="quote-container" onmouseenter="pauseCarousel()" onmouseleave="resumeCarousel()">
+				<div class="carousel-wrapper">
+					<button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+					<div id="quoteSlides">
+						<!-- Slides injected via JS -->
+					</div>
+					<button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
 				</div>
-				<a href="https://x.com/Erik_Hamre/status/1998674420680823064" target="_blank" class="quote-source"
-					>— Erik Haalo (X)</a
-				>
 			</div>
 
 			<h1>Debanking Tracker</h1>
-			<p class="subtitle">Monitoring the weaponization of the banking system and providing alternatives.</p>
+			<p class="subtitle">
+				Monitoring the weaponization of the banking system and providing alternatives. Verified sources are available by
+				clicking the target's name.
+			</p>
 
 			<div class="tabs">
 				<button class="tab-btn active" onclick="switchTab('debanking')">Debanking List</button>
@@ -764,7 +847,7 @@
 		<!-- Footer -->
 		<footer>
 			Created by <strong>Marino Linich</strong> &bull; <a href="https://x.com/MarinoLinic" target="_blank">X</a> &bull;
-			<a href="https://github.com/MarinoLinic/debanking" target="_blank">GitHub</a> &bull;
+			<a href="https://github.com/MarinoLinic/debanking" target="_blank">GitHub Repo</a> &bull;
 			<a href="https://marinolinich.substack.com/" target="_blank">Substack</a>
 		</footer>
 
@@ -777,6 +860,67 @@
 		</div>
 
 		<script>
+			// --- Quote Carousel Logic ---
+			const quotes = [
+				{
+					text: 'Debanking for political speech is clearly a human rights issue, but it has never, not once, been tried as such by the entire human rights NGO world.',
+					author: 'Erik Haalo (X)',
+					url: 'https://x.com/Erik_Hamre/status/1998674420680823064',
+				},
+				{
+					text: "You literally can't get a bank account. You can't get a visa terminal. You can't process transactions. You can't do payroll. You can't do direct deposit. You can't get insurance. You've been sanctioned.",
+					author: 'Marc Andreesen on Operation Chokepoint 2.0',
+					url: 'https://x.com/BasedTorba/status/1861786750638547094',
+				},
+			]
+
+			let slideIndex = 0
+			let carouselTimer
+
+			function initCarousel() {
+				const container = document.getElementById('quoteSlides')
+				container.innerHTML = quotes
+					.map(
+						(q, index) => `
+					<div class="quote-slide ${index === 0 ? 'active' : ''}">
+						<div class="quote-text"><p>${q.text}</p></div>
+						<a href="${q.url}" target="_blank" class="quote-source">— ${q.author}</a>
+					</div>
+				`
+					)
+					.join('')
+				startCarousel()
+			}
+
+			function showSlide(n) {
+				const slides = document.getElementsByClassName('quote-slide')
+				if (n >= slides.length) slideIndex = 0
+				if (n < 0) slideIndex = slides.length - 1
+
+				for (let i = 0; i < slides.length; i++) {
+					slides[i].classList.remove('active')
+				}
+				slides[slideIndex].classList.add('active')
+			}
+
+			function moveSlide(n) {
+				showSlide((slideIndex += n))
+			}
+
+			function startCarousel() {
+				carouselTimer = setInterval(() => {
+					moveSlide(1)
+				}, 7000) // 7 seconds
+			}
+
+			function pauseCarousel() {
+				clearInterval(carouselTimer)
+			}
+
+			function resumeCarousel() {
+				startCarousel()
+			}
+
 			// Toggle Quote Visibility
 			function toggleQuote() {
 				const container = document.getElementById('quoteContainer')
@@ -792,6 +936,8 @@
 					btn.innerText = 'Hide Quote Context'
 				}
 			}
+
+			// --- Main Data Logic ---
 
 			// State
 			let debankingData = []
@@ -809,6 +955,8 @@
 
 			// Initialize
 			document.addEventListener('DOMContentLoaded', () => {
+				initCarousel() // Start the quote carousel
+
 				Promise.all([
 					fetch('debanking.json').then((res) => res.json()),
 					fetch('debanking_alternatives.json').then((res) => res.json()),
