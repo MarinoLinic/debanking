@@ -986,7 +986,7 @@
 		"region": "Global",
 		"people": ["Martin Sellner"],
 		"description": "US-based cryptocurrency exchange.",
-		"year_last": null,
+		"year_last": 2025,
 		"url": "https://www.kraken.com"
 	},
 	{
@@ -997,7 +997,7 @@
 		"region": "Global",
 		"people": ["Martin Sellner"],
 		"description": "The world's largest cryptocurrency exchange.",
-		"year_last": null,
+		"year_last": 2021,
 		"url": "https://www.binance.com"
 	},
 	{
@@ -1030,7 +1030,7 @@
 		"region": "Global",
 		"people": ["Martin Sellner"],
 		"description": "Integrated cryptocurrency wallet within the Telegram messenger.",
-		"year_last": null,
+		"year_last": 2023,
 		"url": "https://wallet.tg"
 	},
 	{
@@ -1041,7 +1041,7 @@
 		"region": "Central Europe",
 		"people": ["Martin Sellner"],
 		"description": "Blockchain banking service (Defunct).",
-		"year_last": null,
+		"year_last": 2025,
 		"url": "https://nuri.com"
 	},
 	{
