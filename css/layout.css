@@ -1,0 +1,86 @@
+/* ── Footer ──────────────────────────────────────────── */
+footer {
+	margin-top: 60px;
+	padding: 28px 20px;
+	text-align: center;
+	font-size: .85rem;
+	color: var(--text-muted);
+	border-top: 1px solid var(--border);
+	background: var(--surface);
+}
+footer a { color: var(--text-secondary); text-decoration: none; font-weight: 600; margin: 0 4px; transition: color .15s; }
+footer a:hover { color: var(--blue); }
+footer strong { color: var(--text-primary); }
+
+/* ── Floating scroll buttons ─────────────────────────── */
+.scroll-controls {
+	position: fixed;
+	bottom: 28px;
+	right: 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	z-index: 100;
+}
+.scroll-btn {
+	width: 42px;
+	height: 42px;
+	background: var(--text-primary);
+	color: white;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.1rem;
+	box-shadow: var(--shadow-md);
+	transition: all .2s;
+	opacity: .6;
+}
+.scroll-btn:hover {
+	opacity: 1;
+	transform: translateY(-2px);
+	background: var(--blue);
+	box-shadow: var(--shadow-lg);
+}
+
+/* ── Mobile ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+	.site-header { padding: 32px 20px 0; }
+	.site-title  { font-size: 2rem; }
+
+	/* Grid */
+	#contentArea.grid-view { grid-template-columns: 1fr; gap: 12px; }
+	.card { padding: 16px; border-radius: var(--radius); }
+	.card-top-row { padding-right: 36px; }
+	.entity-name { font-size: .95rem; }
+	.description { font-size: .875rem; margin-bottom: 14px; }
+	.people-label { font-size: .65rem; }
+
+	/* List */
+	#btn-table { display: none; }
+	.list-view-container { padding: 4px 14px 20px; border-radius: var(--radius); }
+	.list-group h3 { padding: 14px 0 8px; }
+	.list-item { padding: 10px 0; }
+	.list-item-header { font-size: .875rem; }
+	.list-item-details { padding-left: 0; margin-top: 4px; font-size: .835rem; }
+	/* Country tag drops below name on narrow screens */
+	.tag-country-list { margin-left: 0; order: 3; }
+
+	.quote-container { padding: 18px 28px; }
+	.quote-text { font-size: .9rem; }
+	.carousel-btn { padding: 4px; font-size: 1.1rem; }
+	.carousel-btn.prev { left: -22px; }
+	.carousel-btn.next { right: -22px; }
+
+	.controls-inner { flex-direction: column; align-items: stretch; gap: 10px; }
+	.layout-controls { width: 100%; }
+	.layout-btn { flex: 1; padding: 10px 8px; font-size: .85rem; text-align: center; }
+	select.custom-select, .search-input { width: 100%; }
+
+	.content-meta { margin-bottom: 14px; }
+
+	.scroll-controls { bottom: 20px; right: 16px; }
+	.scroll-btn { width: 38px; height: 38px; }
+}

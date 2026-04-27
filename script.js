@@ -128,7 +128,7 @@
 						console.error(err)
 						document.getElementById(
 							'contentArea'
-						).innerHTML = `<div style="text-align:center; color: var(--accent-red); grid-column: 1/-1;">
+						).innerHTML = `<div style="text-align:center; color: var(--red); grid-column: 1/-1;">
                         Error loading data. Please ensure JSON files are present and you are using a local server (CORS).
                     </div>`
 					})
@@ -605,7 +605,7 @@
 										? `<a href="${item.url}" target="_blank" style="text-decoration:none; color:inherit;">${item.name}</a>`
 										: `<span>${item.name}</span>`
 								}
-								<span class="tag tag-country" style="margin-left:auto; font-size:0.7rem;" onclick="addFilter('country', '${
+								<span class="tag tag-country tag-country-list" onclick="addFilter('country', '${
 									item.country
 								}')">${flag} ${item.country || 'Global'}</span>
 							</div>
@@ -710,7 +710,7 @@
 							<td>${item.verification_status || '-'}</td>
 							<td>${
 								item.url
-									? `<a href="${item.url}" target="_blank" style="color:var(--accent-blue); font-weight:bold;">Visit &rarr;</a>`
+									? `<a href="${item.url}" target="_blank" style="color:var(--blue); font-weight:bold;">Visit &rarr;</a>`
 									: ''
 							}</td>
 						`

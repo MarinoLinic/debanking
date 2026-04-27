@@ -18,53 +18,51 @@
 		<meta property="og:type" content="website" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:image" content="image.jpg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<a id="top"></a>
 
-		<header>
-			<!-- Toggle Button Area -->
-			<div class="quote-toggle-wrapper">
-				<button id="quoteToggleBtn" class="toggle-btn" onclick="toggleQuote()">Hide Quote Context</button>
-			</div>
-
-			<!-- Collapsible Quote Carousel -->
-			<div id="quoteContainer" class="quote-container" onmouseenter="pauseCarousel()" onmouseleave="resumeCarousel()">
-				<div class="carousel-wrapper">
-					<button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-					<div id="quoteSlides">
-						<!-- Slides injected via JS -->
-					</div>
-					<button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+		<header class="site-header">
+			<div class="site-header-inner">
+				<!-- Toggle Button Area -->
+				<div class="quote-toggle-wrapper">
+					<button id="quoteToggleBtn" class="toggle-btn" onclick="toggleQuote()">Hide Quote Context</button>
 				</div>
-			</div>
 
-			<h1>Debanking Tracker</h1>
-			<p class="subtitle">Monitoring the weaponization of the banking system against political dissidents.</p>
+				<!-- Collapsible Quote Carousel -->
+				<div id="quoteContainer" class="quote-container" onmouseenter="pauseCarousel()" onmouseleave="resumeCarousel()">
+					<div class="carousel-wrapper">
+						<button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+						<div id="quoteSlides">
+							<!-- Slides injected via JS -->
+						</div>
+						<button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+					</div>
+				</div>
 
-			<div class="tabs">
-				<button id="tab-debanking" class="tab-btn active" onclick="switchTab('debanking')">Debanking List</button>
-				<button id="tab-alternatives" class="tab-btn" onclick="switchTab('alternatives')">Alternatives</button>
+				<h1 class="site-title"><em>Debanking</em> Tracker</h1>
+				<p class="site-subtitle">Monitoring the weaponization of the banking system against political dissidents.</p>
+
+				<div class="tabs">
+					<button id="tab-debanking" class="tab-btn active" onclick="switchTab('debanking')">Debanking List</button>
+					<button id="tab-alternatives" class="tab-btn" onclick="switchTab('alternatives')">Alternatives</button>
+				</div>
+				<div class="header-spacer"></div>
 			</div>
 		</header>
 
 		<!-- Filter Controls -->
-		<div class="controls-area">
-			<div class="left-controls">
-				<div id="resultsCount" class="results-count">Loading...</div>
-				<div class="active-filters" id="activeFilters">
-					<!-- Filter badges injected here -->
-				</div>
-			</div>
-
-			<div class="filter-group">
+		<div class="controls-bar">
+			<div class="controls-inner">
 				<div class="layout-controls">
 					<button class="layout-btn active" id="btn-grid" onclick="switchLayout('grid')" title="Grid View">Grid</button>
 					<button class="layout-btn" id="btn-list" onclick="switchLayout('list')" title="List View">List</button>
 					<button class="layout-btn" id="btn-table" onclick="switchLayout('table')" title="Table View">Table</button>
 				</div>
-
 				<input
 					type="text"
 					id="searchInput"
@@ -83,6 +81,12 @@
 				</select>
 				<button id="clearBtn" class="clear-btn" onclick="clearAllFilters()">Clear Filters</button>
 			</div>
+		</div>
+
+		<!-- Results count + active filter chips -->
+		<div class="content-meta">
+			<span id="resultsCount" class="results-count">Loading...</span>
+			<div class="active-filters" id="activeFilters"></div>
 		</div>
 
 		<!-- Main Content Area -->
