@@ -456,9 +456,9 @@
 		"subtype": "Consumer/Business",
 		"country": "UK",
 		"region": "Western Europe",
-		"people": ["Martin Sellner"],
+		"people": ["Martin Sellner", "Afonso Gonçalves"],
 		"description": "A global financial superapp offering banking, crypto, and trading.",
-		"year_last": null,
+		"year_last": 2026,
 		"url": "https://www.revolut.com"
 	},
 	{
@@ -1370,5 +1370,38 @@
 		"description": "A service for streamers to receive donations and alerts, owned by My.com B.V. at the time of service termination.",
 		"year_last": null,
 		"url": "https://www.donationalerts.com"
+	},
+	{
+		"name": "BPI",
+		"type": "Traditional Bank",
+		"subtype": "Commercial Bank",
+		"country": "Portugal",
+		"region": "Southern Europe",
+		"people": ["Afonso Gonçalves"],
+		"description": "Banco Português de Investimento, one of the largest private banks in Portugal.",
+		"year_last": 2026,
+		"url": "https://www.bancobpi.pt"
+	},
+	{
+		"name": "Millennium BCP",
+		"type": "Traditional Bank",
+		"subtype": "Commercial Bank",
+		"country": "Portugal",
+		"region": "Southern Europe",
+		"people": ["Afonso Gonçalves"],
+		"description": "Banco Comercial Português, the largest private bank in Portugal.",
+		"year_last": 2026,
+		"url": "https://www.millenniumbcp.pt"
+	},
+	{
+		"name": "Novo Banco",
+		"type": "Traditional Bank",
+		"subtype": "Commercial Bank",
+		"country": "Portugal",
+		"region": "Southern Europe",
+		"people": ["Afonso Gonçalves"],
+		"description": "A Portuguese bank created from the resolution of Banco Espírito Santo.",
+		"year_last": 2026,
+		"url": "https://www.novobanco.pt"
 	}
 ]
